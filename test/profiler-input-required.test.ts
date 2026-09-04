@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { ClientFactory } from '@a2a-js/sdk/client';
 import { Role, TaskState } from '@a2a-js/sdk';
 import { startProfiler } from '../src/profiler/index.js';
+import { buildUserPrompt } from '../src/profiler/prompt.js';
 import { computeProfile } from '../src/shared/profile.js';
 
 let server: { url: string; close: () => Promise<void> };
@@ -92,5 +93,15 @@ describe('Profiler input-required gate', () => {
 
     expect(states).not.toContain(TaskState.TASK_STATE_INPUT_REQUIRED);
     expect(states.at(-1)).toBe(TaskState.TASK_STATE_COMPLETED);
+  });
+
+  it('folds the question and option text into the prompt alongside the human answer', () => {
+    const withAnswer = buildUserPrompt(ambiguous, 'b');
+    expect(withAnswer).toContain('They answered: b');
+    expect(withAnswer).toContain('replace with the column median');
+
+    const withoutAnswer = buildUserPrompt(ambiguous);
+    expect(withoutAnswer).not.toContain('They answered');
+    expect(withoutAnswer).not.toContain('replace with the column median');
   });
 });

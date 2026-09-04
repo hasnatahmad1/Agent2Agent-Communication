@@ -1,6 +1,21 @@
 import { ACTIONS } from '../shared/plan.js';
 import type { DatasetProfile } from '../shared/profile.js';
 
+export const AMBIGUITY_QUESTION = [
+  'The age column contains values outside the plausible range 5-100.',
+  'How should these rows be handled?',
+  '  (a) drop those rows',
+  '  (b) replace with the column median',
+  '  (c) leave as-is and flag them in the report',
+].join('\n');
+
+/** Returns true when the profile contains a defect the agent must not resolve alone. */
+export function needsHumanDecision(profile: DatasetProfile): boolean {
+  const age = profile.columns.find((c) => c.name === 'age');
+  if (!age || age.inferredType !== 'number') return false;
+  return (age.min !== undefined && age.min < 5) || (age.max !== undefined && age.max > 100);
+}
+
 export const SYSTEM_PROMPT = `You are a data quality expert.
 
 You receive a statistical profile of a CSV dataset — never the raw rows. Identify the
@@ -48,10 +63,11 @@ export function buildUserPrompt(profile: DatasetProfile, humanAnswer?: string): 
   if (humanAnswer) {
     parts.push(
       '',
-      'The human operator was asked how to handle implausible values in the "age" column',
-      'and answered:',
+      'The human operator was asked:',
       '',
-      humanAnswer,
+      AMBIGUITY_QUESTION,
+      '',
+      `They answered: ${humanAnswer}`,
       '',
       'Your plan must follow that decision.',
     );

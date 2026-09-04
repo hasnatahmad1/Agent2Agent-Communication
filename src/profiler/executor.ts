@@ -8,7 +8,7 @@ import { Role, TaskState, type Message, type Task } from '@a2a-js/sdk';
 import { getLLM } from '../shared/llm.js';
 import { parsePlan } from '../shared/plan.js';
 import type { DatasetProfile } from '../shared/profile.js';
-import { SYSTEM_PROMPT, buildUserPrompt } from './prompt.js';
+import { SYSTEM_PROMPT, buildUserPrompt, AMBIGUITY_QUESTION, needsHumanDecision } from './prompt.js';
 
 function textPart(value: string) {
   return {
@@ -184,6 +184,7 @@ export class ProfilerExecutor implements AgentExecutor {
 
   async cancelTask(taskId: string, bus: ExecutionEventBus): Promise<void> {
     this.cancelled.add(taskId);
+    this.pending.delete(taskId);
     bus.publish(
       AgentEvent.statusUpdate({
         taskId,
@@ -194,21 +195,6 @@ export class ProfilerExecutor implements AgentExecutor {
     );
     bus.finished();
   }
-}
-
-export const AMBIGUITY_QUESTION = [
-  'The age column contains values outside the plausible range 5-100.',
-  'How should these rows be handled?',
-  '  (a) drop those rows',
-  '  (b) replace with the column median',
-  '  (c) leave as-is and flag them in the report',
-].join('\n');
-
-/** Returns true when the profile contains a defect the agent must not resolve alone. */
-export function needsHumanDecision(profile: DatasetProfile): boolean {
-  const age = profile.columns.find((c) => c.name === 'age');
-  if (!age || age.inferredType !== 'number') return false;
-  return (age.min !== undefined && age.min < 5) || (age.max !== undefined && age.max > 100);
 }
 
 function parseProfile(raw: string): DatasetProfile {
