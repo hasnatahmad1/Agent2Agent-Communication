@@ -1,0 +1,27 @@
+{
+  "name": "a2a-data-cleaning",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "profiler": "tsx src/profiler/index.ts",
+    "cleaner": "tsx src/cleaner/index.ts",
+    "clean": "tsx src/cleaner/index.ts --cli",
+    "generate-dataset": "tsx scripts/generate-dataset.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@a2a-js/sdk": "^1.1.0",
+    "@anthropic-ai/claude-agent-sdk": "^0.3.260",
+    "express": "^5.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^2.0.0"
+  }
+}
