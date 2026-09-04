@@ -95,6 +95,24 @@ describe('CleanSession tools', () => {
     ).rejects.toThrow(/action/);
   });
 
+  it('load_csv called a second time resets the change log', async () => {
+    const s = session();
+    const t = toolMap(s);
+    await t.get('load_csv')!.handler({ path: 'data/students_raw.csv' });
+    await t.get('profile_columns')!.handler({});
+    await t.get('ask_profiler')!.handler({});
+    await t.get('apply_plan')!.handler({});
+    expect(s.outcomes.length).toBeGreaterThan(0);
+
+    await t.get('load_csv')!.handler({ path: 'data/students_raw.csv' });
+
+    expect(s.outcomes).toEqual([]);
+    expect(s.plan).toBeNull();
+    expect(s.humanDecision).toBeUndefined();
+    expect(s.rowsBefore).toBe(400);
+    expect(s.rowsAfter).toBe(400);
+  });
+
   it('save_csv and write_report write files', async () => {
     const s = session();
     const t = toolMap(s);

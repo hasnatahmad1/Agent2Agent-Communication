@@ -66,6 +66,13 @@ export class CleanSession {
           this.headers = parsed.headers;
           this.rows = parsed.rows;
           this.initialRowCount = parsed.rows.length;
+          // A loaded dataset starts a new run — clear everything recorded
+          // against whatever was loaded before, or the report's numbers and
+          // its rule list would describe two different datasets.
+          this.profile = null;
+          this._plan = null;
+          this._outcomes = [];
+          this._humanDecision = undefined;
           return `Loaded ${parsed.rows.length} rows with columns: ${parsed.headers.join(', ')}`;
         },
       },
