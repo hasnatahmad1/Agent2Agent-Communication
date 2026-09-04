@@ -36,7 +36,7 @@ export async function startCleaner(
   };
 }
 
-async function cli(csvPath: string): Promise<void> {
+async function cli(csvPath: string): Promise<boolean> {
   const rl = createInterface({ input: process.stdin, output: process.stdout });
   const outDir = process.env.OUT_DIR ?? 'out';
 
@@ -66,6 +66,7 @@ async function cli(csvPath: string): Promise<void> {
     if (missing.length) {
       console.log(`Did NOT write ${missing.map((name) => join(outDir, name)).join(', ')}`);
     }
+    return missing.length === 0;
   } finally {
     rl.close();
   }
@@ -81,7 +82,9 @@ if (process.argv[1]?.replace(/\\/g, '/').endsWith('cleaner/index.ts')) {
       console.error('Usage: npm run clean <path-to-csv>');
       process.exit(1);
     }
-    cli(csvPath).catch((error) => {
+    cli(csvPath).then((success) => {
+      if (!success) process.exit(1);
+    }).catch((error) => {
       console.error(error instanceof Error ? error.message : error);
       process.exit(1);
     });

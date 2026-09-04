@@ -136,6 +136,20 @@ describe('applyRule', () => {
     expect(r.rows).toEqual(base);
     expect(r.headers).not.toContain('email_invalid');
   });
+
+  it('copies the rule reason onto the outcome for an applied rule', () => {
+    const r = applyRule(headers, base, rule({
+      action: 'trim_whitespace', column: 'city', reason: 'because whitespace',
+    }));
+    expect(r.outcome.reason).toBe('because whitespace');
+  });
+
+  it('copies the rule reason onto the outcome for a skipped rule', () => {
+    const r = applyRule(headers, base, rule({
+      action: 'trim_whitespace', column: 'nope', reason: 'because whitespace',
+    }));
+    expect(r.outcome.reason).toBe('because whitespace');
+  });
 });
 
 describe('previewRule', () => {

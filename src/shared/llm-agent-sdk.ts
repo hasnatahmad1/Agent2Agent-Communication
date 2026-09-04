@@ -26,7 +26,10 @@ export class AgentSdkLLM implements LLM {
             // Without this, tools are deferred behind a "tool search" meta-tool —
             // but `tools: []` below disables that meta-tool too, so the model
             // never discovers our tools exist at all and fabricates a transcript
-            // instead of calling them.
+            // instead of calling them. Established empirically (system/init's
+            // `tools` list before/after this flag against a real Claude run),
+            // not from documented SDK text — reverting this silently breaks the
+            // real run while `npm test` (mock path) stays green.
             alwaysLoad: true,
           }),
         }

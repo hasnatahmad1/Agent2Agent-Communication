@@ -96,4 +96,32 @@ describe('buildReport', () => {
   it('anchors row counts to their actual table positions', () => {
     expect(report).toMatch(/\| Removed \| 17 \|/);
   });
+
+  it('falls back to the outcome reason for a rule not in the plan', () => {
+    const rep = buildReport({
+      narrative: 'test',
+      rowsBefore: 10,
+      rowsAfter: 10,
+      plan,
+      outcomes: [
+        { ruleId: 'r14', action: 'normalize', column: 'age', rowsChanged: 3, rowsRemoved: 0, reason: 'fix leftover out-of-range ages' },
+      ],
+    });
+    expect(rep).toContain('fix leftover out-of-range ages');
+    expect(rep).not.toMatch(/\| r14 \| normalize \| age \| 3 \| 0 \| — \|/);
+  });
+
+  it('prefers the plan reason over the outcome reason when both exist', () => {
+    const rep = buildReport({
+      narrative: 'test',
+      rowsBefore: 10,
+      rowsAfter: 10,
+      plan,
+      outcomes: [
+        { ruleId: 'r1', action: 'normalize', column: 'city', rowsChanged: 72, rowsRemoved: 0, reason: 'outcome reason should lose' },
+      ],
+    });
+    expect(rep).toContain('Variants of one city');
+    expect(rep).not.toContain('outcome reason should lose');
+  });
 });

@@ -51,7 +51,7 @@ export function buildReport(input: ReportInput): string {
     lines.push('|---|---|---|---|---|---|');
     for (const o of applied) {
       lines.push(
-        `| ${cell(o.ruleId)} | ${cell(o.action)} | ${cell(o.column ?? '—')} | ${o.rowsChanged} | ${o.rowsRemoved} | ${cell(reasons.get(o.ruleId) ?? '—')} |`,
+        `| ${cell(o.ruleId)} | ${cell(o.action)} | ${cell(o.column ?? '—')} | ${o.rowsChanged} | ${o.rowsRemoved} | ${cell(reasons.get(o.ruleId) ?? o.reason ?? '—')} |`,
       );
     }
     lines.push('');

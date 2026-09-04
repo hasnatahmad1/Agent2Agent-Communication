@@ -9,6 +9,7 @@ export interface RuleOutcome {
   rowsChanged: number;
   rowsRemoved: number;
   skipped?: string;
+  reason?: string;
 }
 
 const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june',
@@ -151,7 +152,7 @@ export function applyRule(
 ): { headers: string[]; rows: Row[]; outcome: RuleOutcome } {
   const outcome: RuleOutcome = {
     ruleId: rule.id, action: rule.action, column: rule.column,
-    rowsChanged: 0, rowsRemoved: 0,
+    rowsChanged: 0, rowsRemoved: 0, reason: rule.reason,
   };
 
   const needsColumn = COLUMN_SCOPED.has(rule.action)
