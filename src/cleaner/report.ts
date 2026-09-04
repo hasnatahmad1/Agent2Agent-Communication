@@ -11,6 +11,11 @@ export interface ReportInput {
   humanDecision?: { question: string; answer: string };
 }
 
+/** Makes an LLM-authored string safe to place inside a markdown table cell. */
+function cell(value: string): string {
+  return value.replace(/\|/g, '\\|').replace(/\r?\n/g, ' ').trim();
+}
+
 export function buildReport(input: ReportInput): string {
   const { narrative, rowsBefore, rowsAfter, plan, outcomes, humanDecision } = input;
   const reasons = new Map(plan?.rules.map((r) => [r.id, r.reason]) ?? []);
@@ -46,7 +51,7 @@ export function buildReport(input: ReportInput): string {
     lines.push('|---|---|---|---|---|---|');
     for (const o of applied) {
       lines.push(
-        `| ${o.ruleId} | ${o.action} | ${o.column ?? '—'} | ${o.rowsChanged} | ${o.rowsRemoved} | ${reasons.get(o.ruleId) ?? '—'} |`,
+        `| ${cell(o.ruleId)} | ${cell(o.action)} | ${cell(o.column ?? '—')} | ${o.rowsChanged} | ${o.rowsRemoved} | ${cell(reasons.get(o.ruleId) ?? '—')} |`,
       );
     }
     lines.push('');
@@ -57,7 +62,7 @@ export function buildReport(input: ReportInput): string {
     lines.push('| Rule | Action | Why |');
     lines.push('|---|---|---|');
     for (const o of skipped) {
-      lines.push(`| ${o.ruleId} | ${o.action} | ${o.skipped} |`);
+      lines.push(`| ${cell(o.ruleId)} | ${cell(o.action)} | ${cell(o.skipped!)} |`);
     }
     lines.push('');
   }

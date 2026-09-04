@@ -54,4 +54,46 @@ describe('buildReport', () => {
     });
     expect(bare).toContain('No cleaning plan');
   });
+
+  it('escapes pipe characters in rule reasons to prevent table corruption', () => {
+    const planWithPipe: CleaningPlan = {
+      summary: 'Test',
+      rules: [
+        { id: 'r1', column: 'col', action: 'normalize', params: {}, reason: 'marks must be 0-100 | clamp out-of-range', severity: 'high' },
+      ],
+    };
+    const rep = buildReport({
+      narrative: 'test',
+      rowsBefore: 10,
+      rowsAfter: 10,
+      plan: planWithPipe,
+      outcomes: [{ ruleId: 'r1', action: 'normalize', column: 'col', rowsChanged: 0, rowsRemoved: 0 }],
+    });
+    // Check that the escaped pipe appears in the output
+    expect(rep).toContain('\\|');
+    // Verify the row with the rule is still intact by checking the pattern
+    expect(rep).toMatch(/\| r1 \| normalize \| col \| 0 \| 0 \| marks must be 0-100 \\\| clamp out-of-range \|/);
+  });
+
+  it('collapses newlines in rule reasons to prevent table row injection', () => {
+    const planWithNewline: CleaningPlan = {
+      summary: 'Test',
+      rules: [
+        { id: 'r2', column: 'col', action: 'trim_whitespace', params: {}, reason: 'first line\nsecond line', severity: 'high' },
+      ],
+    };
+    const rep = buildReport({
+      narrative: 'test',
+      rowsBefore: 10,
+      rowsAfter: 10,
+      plan: planWithNewline,
+      outcomes: [{ ruleId: 'r2', action: 'trim_whitespace', column: 'col', rowsChanged: 0, rowsRemoved: 0 }],
+    });
+    // Check that the reason text appears on a single line without injection
+    expect(rep).toMatch(/\| r2 \| trim_whitespace \| col \| 0 \| 0 \| first line second line \|/);
+  });
+
+  it('anchors row counts to their actual table positions', () => {
+    expect(report).toMatch(/\| Removed \| 17 \|/);
+  });
 });
