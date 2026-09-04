@@ -41,6 +41,8 @@ export function readText(message: Message | undefined): string {
 
 export class ProfilerExecutor implements AgentExecutor {
   private readonly cancelled = new Set<string>();
+  /** Profiles for tasks paused in input-required, keyed by taskId. */
+  private readonly pending = new Map<string, DatasetProfile>();
 
   async execute(ctx: RequestContext, bus: ExecutionEventBus): Promise<void> {
     const { taskId, contextId } = ctx;
@@ -72,8 +74,24 @@ export class ProfilerExecutor implements AgentExecutor {
 
     try {
       const raw = readText(ctx.userMessage);
-      const profile = parseProfile(raw);
 
+      // A follow-up turn: we are holding this task's profile from a prior pause.
+      const resuming = this.pending.has(taskId);
+
+      if (resuming) {
+        const profile = this.pending.get(taskId)!;
+        this.pending.delete(taskId);
+        status(TaskState.TASK_STATE_WORKING, `answer received: ${raw.trim()}`);
+
+        const plan = await this.requestPlan(profile, raw.trim(), (text) =>
+          status(TaskState.TASK_STATE_WORKING, text),
+        );
+        this.publishPlan(bus, taskId, contextId, plan);
+        status(TaskState.TASK_STATE_COMPLETED, plan.summary);
+        return;
+      }
+
+      const profile = parseProfile(raw);
       status(TaskState.TASK_STATE_WORKING, `${profile.columns.length} columns received`);
 
       for (const column of profile.columns) {
@@ -89,29 +107,19 @@ export class ProfilerExecutor implements AgentExecutor {
         }
       }
 
+      if (needsHumanDecision(profile)) {
+        this.pending.set(taskId, profile);
+        status(TaskState.TASK_STATE_INPUT_REQUIRED, AMBIGUITY_QUESTION);
+        return;
+      }
+
       status(TaskState.TASK_STATE_WORKING, 'asking Claude for a cleaning plan');
 
       const plan = await this.requestPlan(profile, undefined, (text) =>
         status(TaskState.TASK_STATE_WORKING, text),
       );
 
-      bus.publish(
-        AgentEvent.artifactUpdate({
-          taskId,
-          contextId,
-          artifact: {
-            artifactId: crypto.randomUUID(),
-            name: 'cleaning-plan',
-            description: 'Cleaning rules with justifications',
-            parts: [textPart(JSON.stringify(plan, null, 2))],
-            metadata: undefined,
-            extensions: [],
-          },
-          append: false,
-          lastChunk: true,
-          metadata: undefined,
-        }),
-      );
+      this.publishPlan(bus, taskId, contextId, plan);
 
       status(TaskState.TASK_STATE_COMPLETED, plan.summary);
     } catch (error) {
@@ -122,6 +130,31 @@ export class ProfilerExecutor implements AgentExecutor {
     } finally {
       bus.finished();
     }
+  }
+
+  private publishPlan(
+    bus: ExecutionEventBus,
+    taskId: string,
+    contextId: string,
+    plan: { summary: string },
+  ): void {
+    bus.publish(
+      AgentEvent.artifactUpdate({
+        taskId,
+        contextId,
+        artifact: {
+          artifactId: crypto.randomUUID(),
+          name: 'cleaning-plan',
+          description: 'Cleaning rules with justifications',
+          parts: [textPart(JSON.stringify(plan, null, 2))],
+          metadata: undefined,
+          extensions: [],
+        },
+        append: false,
+        lastChunk: true,
+        metadata: undefined,
+      }),
+    );
   }
 
   /** Calls Claude and validates the reply, retrying once with the validation error. */
@@ -161,6 +194,21 @@ export class ProfilerExecutor implements AgentExecutor {
     );
     bus.finished();
   }
+}
+
+export const AMBIGUITY_QUESTION = [
+  'The age column contains values outside the plausible range 5-100.',
+  'How should these rows be handled?',
+  '  (a) drop those rows',
+  '  (b) replace with the column median',
+  '  (c) leave as-is and flag them in the report',
+].join('\n');
+
+/** Returns true when the profile contains a defect the agent must not resolve alone. */
+export function needsHumanDecision(profile: DatasetProfile): boolean {
+  const age = profile.columns.find((c) => c.name === 'age');
+  if (!age || age.inferredType !== 'number') return false;
+  return (age.min !== undefined && age.min < 5) || (age.max !== undefined && age.max > 100);
 }
 
 function parseProfile(raw: string): DatasetProfile {
