@@ -24,7 +24,10 @@ export function cleanerCard(port: number): AgentCard {
         id: 'clean-dataset',
         name: 'Dataset Cleaning',
         description:
-          'Given a path to a CSV file, clean it and produce a cleaned CSV plus a report.',
+          'Given a path to a CSV file, clean it and produce a cleaned CSV plus a report. ' +
+          'A delegated run over A2A has no human operator: any ambiguity question from the ' +
+          'Profiler agent is answered with a documented default ("b"), disclosed in the report\'s ' +
+          '"Human decision" section. The interactive CLI (`npm run clean`) asks a human instead.',
         tags: ['data', 'cleaning', 'csv'],
         examples: ['Clean data/students_raw.csv'],
         inputModes: ['text/plain'],

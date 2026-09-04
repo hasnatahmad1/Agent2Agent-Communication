@@ -72,6 +72,15 @@ export class ProfilerExecutor implements AgentExecutor {
     };
     bus.publish(AgentEvent.task(task));
 
+    // Both maps hold per-task state only for as long as the task is live.
+    // Clearing them on every terminal transition (completed, failed,
+    // canceled) keeps a client that pauses and never resumes — or a task
+    // that's canceled — from leaking a profile or a Set entry forever.
+    const cleanup = () => {
+      this.pending.delete(taskId);
+      this.cancelled.delete(taskId);
+    };
+
     try {
       const raw = readText(ctx.userMessage);
 
@@ -87,6 +96,7 @@ export class ProfilerExecutor implements AgentExecutor {
           status(TaskState.TASK_STATE_WORKING, text),
         );
         this.publishPlan(bus, taskId, contextId, plan);
+        cleanup();
         status(TaskState.TASK_STATE_COMPLETED, plan.summary);
         return;
       }
@@ -95,13 +105,13 @@ export class ProfilerExecutor implements AgentExecutor {
       status(TaskState.TASK_STATE_WORKING, `${profile.columns.length} columns received`);
 
       for (const column of profile.columns) {
-        if (this.cancelled.has(taskId)) return;
+        if (this.cancelled.has(taskId)) { cleanup(); return; }
         const notes: string[] = [];
         if (column.distinctCount > 3 && column.inferredType === 'string') {
           notes.push(`${column.distinctCount} distinct variants`);
         }
         if (column.nullCount > 0) notes.push(`${column.nullCount} missing`);
-        if (column.outOfRangeCount) notes.push(`${column.outOfRangeCount} out of range`);
+        if (column.valuesOutside0To100) notes.push(`${column.valuesOutside0To100} outside 0-100`);
         if (notes.length) {
           status(TaskState.TASK_STATE_WORKING, `${column.name}: ${notes.join(', ')}`);
         }
@@ -121,8 +131,10 @@ export class ProfilerExecutor implements AgentExecutor {
 
       this.publishPlan(bus, taskId, contextId, plan);
 
+      cleanup();
       status(TaskState.TASK_STATE_COMPLETED, plan.summary);
     } catch (error) {
+      cleanup();
       status(
         TaskState.TASK_STATE_FAILED,
         error instanceof Error ? error.message : String(error),

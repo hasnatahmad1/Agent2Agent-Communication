@@ -42,6 +42,13 @@ describe('CleanSession tools', () => {
     await expect(t.get('profile_columns')!.handler({})).rejects.toThrow(/load_csv/);
   });
 
+  it('write_report refuses to run before load_csv', async () => {
+    const t = toolMap(session());
+    await expect(
+      t.get('write_report')!.handler({ summary: 'nothing was cleaned' }),
+    ).rejects.toThrow(/load_csv/);
+  });
+
   it('profile_columns returns JSON that includes every column', async () => {
     const t = toolMap(session());
     await t.get('load_csv')!.handler({ path: 'data/students_raw.csv' });

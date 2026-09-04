@@ -8,12 +8,32 @@ export interface ReportInput {
   rowsAfter: number;
   plan: CleaningPlan | null;
   outcomes: RuleOutcome[];
-  humanDecision?: { question: string; answer: string };
+  humanDecision?: { question: string; answer: string; automatic?: boolean };
 }
 
 /** Makes an LLM-authored string safe to place inside a markdown table cell. */
 function cell(value: string): string {
   return value.replace(/\|/g, '\\|').replace(/\r?\n/g, ' ').trim();
+}
+
+/**
+ * Makes an LLM-authored block of prose (the narrative, the plan summary) safe
+ * to place directly in the report body. Only the Rows table and the per-rule
+ * counts below are guaranteed to come from the recorded change log; this
+ * stops model text from forging a look-alike heading, table row, or rule to
+ * pass itself off as one of those.
+ */
+function proseBlock(value: string): string {
+  return value
+    .split('\n')
+    .map((line) => {
+      let out = line;
+      if (/^\s*#/.test(out)) out = out.replace(/^(\s*)#/, '$1\\#');
+      if (/^\s*(-{3,}|\*{3,}|_{3,})\s*$/.test(out)) out = out.replace(/^(\s*)([-*_])/, '$1\\$2');
+      if (out.includes('|')) out = out.replace(/\|/g, '\\|');
+      return out;
+    })
+    .join('\n');
 }
 
 export function buildReport(input: ReportInput): string {
@@ -25,7 +45,7 @@ export function buildReport(input: ReportInput): string {
   const lines: string[] = [
     '# Data Cleaning Report',
     '',
-    narrative.trim(),
+    proseBlock(narrative.trim()),
     '',
     '## Rows',
     '',
@@ -40,7 +60,7 @@ export function buildReport(input: ReportInput): string {
   if (!plan) {
     lines.push('## Plan', '', 'No cleaning plan was obtained from the Profiler agent.', '');
   } else {
-    lines.push('## Plan summary', '', plan.summary.trim(), '');
+    lines.push('## Plan summary', '', proseBlock(plan.summary.trim()), '');
   }
 
   lines.push('## Rules applied', '');
@@ -75,7 +95,9 @@ export function buildReport(input: ReportInput): string {
       '',
       `> ${humanDecision.question.replace(/\n/g, '\n> ')}`,
       '',
-      `Answer given: **${humanDecision.answer}**`,
+      humanDecision.automatic
+        ? `Answer given: **${humanDecision.answer}** — answered automatically by the delegated agent (no human present); default: ${humanDecision.answer}`
+        : `Answer given: **${humanDecision.answer}**`,
       '',
     );
   }

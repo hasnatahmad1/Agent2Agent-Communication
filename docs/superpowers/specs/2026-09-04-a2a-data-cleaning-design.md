@@ -208,7 +208,7 @@ cleaning job to it. Serving this card is what makes that true.
 | `apply_rule` | `rule` | rows changed | Mutates working dataset |
 | `dedupe` | `keys`, `keep` | rows removed | Mutates working dataset |
 | `save_csv` | `path` | rows written | Writes final output |
-| `write_report` | `summary` | path written | Claude supplies the narrative paragraph; code fills every number from the change log, so the report cannot contain invented statistics |
+| `write_report` | `summary` | path written | Claude supplies the narrative paragraph; the Rows table and the per-rule counts are filled in from the recorded change log — the narrative and the plan summary remain model-authored prose |
 
 Claude receives a goal, not a script:
 
@@ -256,7 +256,7 @@ Computed deterministically, ~2K tokens for 400 rows:
       "inferredType": "number",
       "nullCount": 5,
       "min": -5, "max": 105, "mean": 67.2,
-      "outOfRangeCount": 14,
+      "valuesOutside0To100": 14,
       "nonNumericValues": []
     }
   ],
@@ -397,9 +397,11 @@ only the reasoning is stubbed.
 |---|---|
 | `out/cleaned.csv` | The cleaned dataset |
 | `out/cleaning-plan.json` | The artifact received from the Profiler, saved verbatim |
-| `out/report.md` | Before/after counts per column, each rule applied with its reason, and the human decision made at the `input-required` gate |
+| `out/report.md` | The Rows table and each rule's rows-changed/removed counts come from the recorded change log; the narrative paragraph and the Profiler's plan summary are model-authored prose, not derived from the log; and the human decision made at the `input-required` gate (or its documented automatic default, for a delegated A2A run) is recorded verbatim |
 
-`report.md` is the demo's headline output: it proves what the agents decided and why.
+`report.md` is the demo's headline output: the Rows table and per-rule counts are
+independently verifiable against the change log — the narrative and plan summary are not,
+and are presented as prose, not as verified fact.
 
 ---
 

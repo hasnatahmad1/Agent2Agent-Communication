@@ -87,7 +87,11 @@ function transformCell(value: string, rule: CleaningRule, column: string, rows: 
       if (!Number.isFinite(n) || value.trim() === '') return value;
       const min = typeof p.min === 'number' ? p.min : -Infinity;
       const max = typeof p.max === 'number' ? p.max : Infinity;
-      return String(Math.min(max, Math.max(min, n)));
+      const clipped = Math.min(max, Math.max(min, n));
+      // Return the original string, not String(n), when the number didn't
+      // actually move — otherwise "85.0" -> "85" reads as a changed value
+      // and inflates rowsChanged even though nothing was clipped.
+      return clipped === n ? value : String(clipped);
     }
 
     case 'coerce_number': {
@@ -108,7 +112,14 @@ function transformCell(value: string, rule: CleaningRule, column: string, rows: 
     }
 
     case 'fill': {
-      if (!isMissing(value)) return value;
+      const alsoOutside = p.alsoOutside as { min: number; max: number } | undefined;
+      const isOutOfRange = () => {
+        if (!alsoOutside) return false;
+        const n = Number(value);
+        return value.trim() !== '' && Number.isFinite(n)
+          && (n < alsoOutside.min || n > alsoOutside.max);
+      };
+      if (!isMissing(value) && !isOutOfRange()) return value;
       const strategy = p.strategy ?? 'constant';
       if (strategy === 'constant') return String(p.value ?? '');
       const present = rows.map((r) => r[column] ?? '').filter((v) => !isMissing(v));
@@ -253,11 +264,23 @@ export function previewRule(
     return { rowsAffected: result.outcome.rowsRemoved, examples };
   }
 
-  const column = rule.action === 'flag_invalid' && rule.column
-    ? `${rule.column}_invalid`
-    : rule.column;
+  if (rule.action === 'flag_invalid' && rule.column) {
+    // The flag column doesn't exist on the "before" rows, so a plain before/after
+    // diff on it reads every valid row as "changed" ('' -> "false") while the rows
+    // actually flagged ("true") may never make the first 5. Show the rows that were
+    // actually flagged, with the original value that failed the pattern.
+    const column = rule.column;
+    const flagColumn = `${column}_invalid`;
+    for (let i = 0; i < rows.length && examples.length < 5; i++) {
+      if (result.rows[i]?.[flagColumn] === 'true') {
+        examples.push({ before: rows[i][column] ?? '', after: 'true' });
+      }
+    }
+    return { rowsAffected: result.outcome.rowsChanged, examples };
+  }
 
-  if (column) {
+  if (rule.column) {
+    const column = rule.column;
     for (let i = 0; i < rows.length && examples.length < 5; i++) {
       const before = rows[i][column] ?? '';
       const after = result.rows[i]?.[column] ?? '';

@@ -84,7 +84,7 @@ After a run, `out/` contains:
 
 | File | What it is |
 |---|---|
-| `out/report.md` | Human-readable cleaning report: rows before/after, the Profiler's plan summary, a table of every rule applied with rows changed/removed, and the human decision recorded verbatim |
+| `out/report.md` | Human-readable cleaning report: the Rows table and the per-rule counts (rows changed/removed) come straight from the recorded change log — the narrative paragraph and the Profiler's plan summary are model-authored prose, and the human decision (or its documented automatic default, see below) is recorded verbatim |
 | `out/cleaning-plan.json` | The raw plan artifact returned by the Profiler — the rules, their reasons, and severities |
 | `out/cleaned.csv` | The cleaned dataset |
 
@@ -115,6 +115,13 @@ means every plan is previewable and auditable before it touches a single row.
 list with Zod before anything is applied — "however it was produced, a plan cannot
 request an arbitrary transformation." No `eval`, no free-form scripts, no way for either
 agent to smuggle logic outside what the rule engine can execute.
+
+**A delegated `clean-dataset` run has no human to ask.** When another agent delegates a
+cleaning job to the Cleaner over A2A (`CleanerExecutor`), the Profiler's `input-required`
+pause is answered with a documented default (`b`) rather than failing the task, and the
+report's "Human decision" section discloses that the answer was automatic. The natural
+next step is to relay the pause upward as the delegated task's own `input-required`, so
+the delegating agent (or its human) can answer it — out of scope for this pass.
 
 **Protocol-v1 gotchas worth knowing**, discovered while wiring this up against
 `@a2a-js/sdk@1.1.0`:

@@ -36,6 +36,8 @@ export interface RunCleaningOptions {
   outDir: string;
   onUpdate?: (text: string) => void;
   onQuestion?: (question: string) => Promise<string>;
+  /** See CleanSessionOptions.automaticAnswer. */
+  automaticAnswer?: boolean;
 }
 
 export async function runCleaning(options: RunCleaningOptions): Promise<{
@@ -43,10 +45,10 @@ export async function runCleaning(options: RunCleaningOptions): Promise<{
   rowsBefore: number;
   rowsAfter: number;
 }> {
-  const { csvPath, profilerUrl, outDir, onUpdate, onQuestion } = options;
+  const { csvPath, profilerUrl, outDir, onUpdate, onQuestion, automaticAnswer } = options;
   mkdirSync(outDir, { recursive: true });
 
-  const session = new CleanSession({ profilerUrl, onUpdate, onQuestion });
+  const session = new CleanSession({ profilerUrl, onUpdate, onQuestion, automaticAnswer });
   const llm = getLLM('cleaner');
 
   const narrative = await llm.run({
@@ -94,6 +96,16 @@ function agentMessage(taskId: string, contextId: string, text: string): Message 
   };
 }
 
+/**
+ * Default answer given to the Profiler's `input-required` question when this
+ * task was delegated over A2A rather than driven by the interactive CLI —
+ * there is no human to ask. Relaying the pause as this delegated task's own
+ * `input-required` (so the delegating agent or its human can answer) is the
+ * protocol-correct fix and is out of scope here; this keeps the advertised
+ * `clean-dataset` skill from failing outright in the meantime.
+ */
+const DELEGATED_RUN_DEFAULT_ANSWER = 'b';
+
 /** Lets another agent delegate a cleaning job to this one over A2A. */
 export class CleanerExecutor implements AgentExecutor {
   async execute(ctx: RequestContext, bus: ExecutionEventBus): Promise<void> {
@@ -138,6 +150,8 @@ export class CleanerExecutor implements AgentExecutor {
         profilerUrl: process.env.PROFILER_URL ?? 'http://localhost:4002',
         outDir: process.env.OUT_DIR ?? 'out',
         onUpdate: (text) => status(TaskState.TASK_STATE_WORKING, text),
+        onQuestion: async () => DELEGATED_RUN_DEFAULT_ANSWER,
+        automaticAnswer: true,
       });
 
       status(

@@ -49,6 +49,9 @@ Rules:
 - "coerce_number" may take params.wordMap, e.g. {"twenty": 20}.
 - "parse_date" takes params.targetFormat, always "YYYY-MM-DD".
 - "fill" takes params.strategy ("median" | "mode" | "constant") and params.value for constant.
+  It replaces missing values by default. Add params.alsoOutside: {"min": N, "max": N} to also
+  replace values that parse as a number but fall outside that range — use this for "replace
+  implausible values with the column median" instead of inventing a separate action.
 - "flag_invalid" takes params.pattern, a JavaScript regular expression source string.
 - "dedupe" is row-scoped: omit "column", pass params.keys (array) and params.keep ("first" | "last").
 - "drop_rows_where" takes params.predicate, e.g. {"op": "lt", "value": 0}.`;

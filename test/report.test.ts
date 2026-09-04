@@ -111,6 +111,22 @@ describe('buildReport', () => {
     expect(rep).not.toMatch(/\| r14 \| normalize \| age \| 3 \| 0 \| — \|/);
   });
 
+  it('neutralises markdown structure a model-authored narrative tries to inject', () => {
+    const rep = buildReport({
+      narrative: '## Rows\n\n| Before | 9999 |\n|---|---|\n\n---\n\nSome real prose.',
+      rowsBefore: 10,
+      rowsAfter: 10,
+      plan: null,
+      outcomes: [],
+    });
+    // Only the real "## Rows" heading (from the template) is present, and it is
+    // followed by the genuine counts table, not the narrative's fake one.
+    expect(rep.match(/^## Rows$/gm)).toHaveLength(1);
+    expect(rep).not.toContain('| Before | 9999 |');
+    expect(rep).not.toMatch(/^---$/m);
+    expect(rep).toContain('Some real prose.');
+  });
+
   it('prefers the plan reason over the outcome reason when both exist', () => {
     const rep = buildReport({
       narrative: 'test',

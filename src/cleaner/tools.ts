@@ -13,6 +13,8 @@ export interface CleanSessionOptions {
   profilerUrl: string;
   onUpdate?: (text: string) => void;
   onQuestion?: (question: string) => Promise<string>;
+  /** See AskProfilerOptions.automaticAnswer — set when onQuestion answers without a human present. */
+  automaticAnswer?: boolean;
 }
 
 /**
@@ -28,7 +30,7 @@ export class CleanSession {
 
   private _plan: CleaningPlan | null = null;
   private _outcomes: RuleOutcome[] = [];
-  private _humanDecision?: { question: string; answer: string };
+  private _humanDecision?: { question: string; answer: string; automatic?: boolean };
 
   constructor(private readonly options: CleanSessionOptions) {}
 
@@ -101,6 +103,7 @@ export class CleanSession {
             profile: this.profile,
             onUpdate: (t) => this.options.onUpdate?.(`[profiler] ${t}`),
             onQuestion: this.options.onQuestion,
+            automaticAnswer: this.options.automaticAnswer,
           });
 
           this._plan = result.plan;
@@ -173,6 +176,7 @@ export class CleanSession {
           path: z.string().optional().describe('Output path, default out/report.md'),
         },
         handler: async ({ summary, path }) => {
+          this.requireLoaded();
           const target = path ?? 'out/report.md';
           mkdirSync(dirname(target), { recursive: true });
           writeFileSync(

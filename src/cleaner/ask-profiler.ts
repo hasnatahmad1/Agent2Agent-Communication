@@ -10,6 +10,13 @@ export interface AskProfilerOptions {
   profile: DatasetProfile;
   onUpdate?: (text: string) => void;
   onQuestion?: (question: string) => Promise<string>;
+  /**
+   * Set when `onQuestion` answers without a human present (e.g. a delegated
+   * A2A run using a documented default). Recorded on the returned
+   * `humanDecision` so the report can disclose it instead of implying a
+   * human answered.
+   */
+  automaticAnswer?: boolean;
   /** Deadline for the card fetch and each streaming call. Default 120000ms. */
   timeoutMs?: number;
 }
@@ -17,7 +24,7 @@ export interface AskProfilerOptions {
 export interface AskProfilerResult {
   plan: CleaningPlan;
   taskId: string;
-  humanDecision?: { question: string; answer: string };
+  humanDecision?: { question: string; answer: string; automatic?: boolean };
 }
 
 function textPart(value: string) {
@@ -77,7 +84,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number, message: string): Promi
  * the same task, and returns the validated cleaning plan artifact.
  */
 export async function askProfiler(options: AskProfilerOptions): Promise<AskProfilerResult> {
-  const { profilerUrl, profile, onUpdate, onQuestion, timeoutMs = 120_000 } = options;
+  const { profilerUrl, profile, onUpdate, onQuestion, automaticAnswer, timeoutMs = 120_000 } = options;
 
   // 1. Discovery.
   const factory = new ClientFactory();
@@ -120,7 +127,7 @@ export async function askProfiler(options: AskProfilerOptions): Promise<AskProfi
   let taskId = '';
   let contextId = '';
   let planJson = '';
-  let humanDecision: { question: string; answer: string } | undefined;
+  let humanDecision: { question: string; answer: string; automatic?: boolean } | undefined;
   let pendingQuestion: string | undefined;
   let failure: string | undefined;
 
@@ -173,7 +180,7 @@ export async function askProfiler(options: AskProfilerOptions): Promise<AskProfi
     const question = pendingQuestion;
     pendingQuestion = undefined;
     const answer = await onQuestion(question);
-    humanDecision = { question, answer };
+    humanDecision = { question, answer, automatic: automaticAnswer };
     await consume(userMessage(answer, taskId, contextId));
   }
 

@@ -67,6 +67,47 @@ describe('applyRule', () => {
     expect(r.rows[2].age).toBe('20');
   });
 
+  it('fill with alsoOutside replaces missing and out-of-range values', () => {
+    const rows: Row[] = [
+      { roll_no: '1', city: 'x', age: '20', marks: '1', email: 'a@b.pk', enrolled_date: '2024-03-01' },
+      { roll_no: '2', city: 'x', age: '250', marks: '1', email: 'a@b.pk', enrolled_date: '2024-03-01' },
+      { roll_no: '3', city: 'x', age: '', marks: '1', email: 'a@b.pk', enrolled_date: '2024-03-01' },
+    ];
+    const r = applyRule(headers, rows, rule({
+      action: 'fill', column: 'age', params: { strategy: 'median', alsoOutside: { min: 5, max: 100 } },
+    }));
+    // median is computed over all present values (20 and 250), same as any other
+    // fill: median(20, 250) = 135. What alsoOutside changes is which cells are
+    // eligible to be replaced by it — here, the out-of-range 250 and the missing cell.
+    expect(r.rows[0].age).toBe('20');
+    expect(r.rows[1].age).toBe('135');
+    expect(r.rows[2].age).toBe('135');
+    expect(r.outcome.rowsChanged).toBe(2);
+  });
+
+  it('fill without alsoOutside leaves out-of-range values untouched', () => {
+    const rows: Row[] = [
+      { roll_no: '1', city: 'x', age: '20', marks: '1', email: 'a@b.pk', enrolled_date: '2024-03-01' },
+      { roll_no: '2', city: 'x', age: '250', marks: '1', email: 'a@b.pk', enrolled_date: '2024-03-01' },
+    ];
+    const r = applyRule(headers, rows, rule({
+      action: 'fill', column: 'age', params: { strategy: 'median' },
+    }));
+    expect(r.rows[1].age).toBe('250');
+    expect(r.outcome.rowsChanged).toBe(0);
+  });
+
+  it('clip leaves an in-range value unchanged even when its string form would differ', () => {
+    const rows: Row[] = [
+      { roll_no: '1', city: 'x', age: '20', marks: '85.0', email: 'a@b.pk', enrolled_date: '2024-03-01' },
+    ];
+    const r = applyRule(headers, rows, rule({
+      action: 'clip', column: 'marks', params: { min: 0, max: 100 },
+    }));
+    expect(r.rows[0].marks).toBe('85.0');
+    expect(r.outcome.rowsChanged).toBe(0);
+  });
+
   it('fill with a constant uses the given value', () => {
     const r = applyRule(headers, base, rule({
       action: 'fill', column: 'city', params: { strategy: 'constant', value: 'Unknown' },
@@ -169,5 +210,14 @@ describe('previewRule', () => {
     expect(p.rowsAffected).toBe(1);
     expect(p.examples.length).toBeGreaterThan(0);
     expect(['true', 'false']).toContain(p.examples[0].after);
+  });
+
+  it('flag_invalid examples show rows that were actually flagged, not valid ones', () => {
+    const p = previewRule(headers, base, rule({
+      action: 'flag_invalid', column: 'email', params: { pattern: '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$' },
+    }));
+    // Only row 1 ("bad@") is invalid; its original value must be the example shown,
+    // not one of the valid rows' emails.
+    expect(p.examples).toEqual([{ before: 'bad@', after: 'true' }]);
   });
 });

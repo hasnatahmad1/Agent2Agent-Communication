@@ -17,7 +17,7 @@ export interface ColumnProfile {
   min?: number;
   max?: number;
   mean?: number;
-  outOfRangeCount?: number;
+  valuesOutside0To100?: number;
   nonNumericValues?: string[];
 }
 
@@ -96,7 +96,7 @@ function profileColumn(name: string, rows: Row[]): ColumnProfile {
     min,
     max,
     mean: Math.round(mean * 100) / 100,
-    outOfRangeCount: numeric.filter((n) => n < 0 || n > 100).length,
+    valuesOutside0To100: numeric.filter((n) => n < 0 || n > 100).length,
     nonNumericValues,
   };
 }
