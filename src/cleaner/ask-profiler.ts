@@ -146,8 +146,10 @@ export async function askProfiler(options: AskProfilerOptions): Promise<AskProfi
         } else if (payload.$case === 'statusUpdate') {
           const state = payload.value.status?.state;
           const text = readText(payload.value.status?.message);
-          if (text) onUpdate?.(text);
+          // The input-required text is the question itself; it reaches the caller
+          // through onQuestion, so relaying it here too would print it twice.
           if (state === TaskState.TASK_STATE_INPUT_REQUIRED) pendingQuestion = text;
+          else if (text) onUpdate?.(text);
           if (state === TaskState.TASK_STATE_FAILED) failure = text || 'task failed';
         } else if (payload.$case === 'artifactUpdate') {
           const part = payload.value.artifact?.parts[0];

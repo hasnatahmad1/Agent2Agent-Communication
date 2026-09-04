@@ -38,6 +38,20 @@ describe('askProfiler', () => {
     expect(result.plan.rules.length).toBeGreaterThan(0);
   });
 
+  it('delivers the question only through onQuestion, never also as a status update', async () => {
+    const updates: string[] = [];
+    let asked = '';
+    await askProfiler({
+      profilerUrl: server.url,
+      profile: ambiguousProfile,
+      onUpdate: (t) => updates.push(t),
+      onQuestion: async (q) => { asked = q; return 'b'; },
+    });
+
+    expect(asked).toContain('replace with the column median');
+    expect(updates.some((u) => u.includes('replace with the column median'))).toBe(false);
+  });
+
   it('fails clearly when the agent card lacks the required skill', async () => {
     const fake = await startFakeCardServer();
     await expect(
