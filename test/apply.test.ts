@@ -124,6 +124,18 @@ describe('applyRule', () => {
     applyRule(headers, base, rule({ action: 'trim_whitespace', column: 'city' }));
     expect(JSON.stringify(base)).toBe(snapshot);
   });
+
+  it('skips flag_invalid with a malformed pattern instead of throwing', () => {
+    expect(() => applyRule(headers, base, rule({
+      action: 'flag_invalid', column: 'email', params: { pattern: '([unclosed' },
+    }))).not.toThrow();
+    const r = applyRule(headers, base, rule({
+      action: 'flag_invalid', column: 'email', params: { pattern: '([unclosed' },
+    }));
+    expect(r.outcome.skipped).toContain('([unclosed');
+    expect(r.rows).toEqual(base);
+    expect(r.headers).not.toContain('email_invalid');
+  });
 });
 
 describe('previewRule', () => {
@@ -134,5 +146,14 @@ describe('previewRule', () => {
     expect(p.rowsAffected).toBe(2);
     expect(p.examples[0]).toEqual({ before: '105', after: '100' });
     expect(p.examples.length).toBeLessThanOrEqual(5);
+  });
+
+  it('reports non-empty examples for flag_invalid, diffing the flag column', () => {
+    const p = previewRule(headers, base, rule({
+      action: 'flag_invalid', column: 'email', params: { pattern: '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$' },
+    }));
+    expect(p.rowsAffected).toBe(1);
+    expect(p.examples.length).toBeGreaterThan(0);
+    expect(['true', 'false']).toContain(p.examples[0].after);
   });
 });

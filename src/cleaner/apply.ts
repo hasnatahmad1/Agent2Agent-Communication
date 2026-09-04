@@ -183,7 +183,17 @@ export function applyRule(
   if (rule.action === 'flag_invalid') {
     const column = rule.column!;
     const flagColumn = `${column}_invalid`;
-    const pattern = new RegExp(String((rule.params as any).pattern ?? '.*'));
+    const patternSource = String((rule.params as any).pattern ?? '.*');
+    let pattern: RegExp;
+    try {
+      pattern = new RegExp(patternSource);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      return {
+        headers, rows,
+        outcome: { ...outcome, skipped: `invalid pattern for flag_invalid: ${message}` },
+      };
+    }
     let changed = 0;
     const next = rows.map((row) => {
       const value = row[column] ?? '';
@@ -242,7 +252,9 @@ export function previewRule(
     return { rowsAffected: result.outcome.rowsRemoved, examples };
   }
 
-  const column = rule.column;
+  const column = rule.action === 'flag_invalid' && rule.column
+    ? `${rule.column}_invalid`
+    : rule.column;
 
   if (column) {
     for (let i = 0; i < rows.length && examples.length < 5; i++) {
