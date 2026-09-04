@@ -38,7 +38,10 @@ export class AgentSdkLLM implements LLM {
         systemPrompt: { type: 'custom', prompt: request.system },
         mcpServers,
         allowedTools,
-        // The tools are ours and touch only this project's files.
+        // `tools: []` disables every built-in tool (Bash, Read, Write, ...), so the
+        // only tools Claude can reach are the MCP tools we registered ourselves.
+        // `bypassPermissions` therefore auto-approves only those.
+        tools: [],
         permissionMode: 'bypassPermissions',
         // Do not inherit the developer's CLAUDE.md, settings, or plugins.
         settingSources: [],
