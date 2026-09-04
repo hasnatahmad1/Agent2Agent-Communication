@@ -1,4 +1,6 @@
 import { createInterface } from 'node:readline/promises';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import express from 'express';
 import { DefaultRequestHandler, InMemoryTaskStore } from '@a2a-js/sdk/server';
 import { agentCardHandler, jsonRpcHandler, UserBuilder } from '@a2a-js/sdk/server/express';
@@ -36,23 +38,37 @@ export async function startCleaner(
 
 async function cli(csvPath: string): Promise<void> {
   const rl = createInterface({ input: process.stdin, output: process.stdout });
+  const outDir = process.env.OUT_DIR ?? 'out';
 
-  const result = await runCleaning({
-    csvPath,
-    profilerUrl: process.env.PROFILER_URL ?? 'http://localhost:4002',
-    outDir: process.env.OUT_DIR ?? 'out',
-    onUpdate: (text) => console.log(text),
-    onQuestion: async (question) => {
-      console.log(`\n${question}\n`);
-      const answer = await rl.question('Your answer: ');
-      return answer.trim();
-    },
-  });
+  try {
+    const result = await runCleaning({
+      csvPath,
+      profilerUrl: process.env.PROFILER_URL ?? 'http://localhost:4002',
+      outDir,
+      onUpdate: (text) => console.log(text),
+      onQuestion: async (question) => {
+        console.log(`\n${question}\n`);
+        const answer = await rl.question('Your answer: ');
+        return answer.trim();
+      },
+    });
 
-  rl.close();
-  console.log(`\n${result.narrative}`);
-  console.log(`Rows: ${result.rowsBefore} -> ${result.rowsAfter}`);
-  console.log('Wrote out/cleaned.csv, out/report.md, out/cleaning-plan.json');
+    console.log(`\n${result.narrative}`);
+    console.log(`Rows: ${result.rowsBefore} -> ${result.rowsAfter}`);
+
+    const expected = ['cleaned.csv', 'report.md', 'cleaning-plan.json'];
+    const written = expected.filter((name) => existsSync(join(outDir, name)));
+    const missing = expected.filter((name) => !written.includes(name));
+
+    if (written.length) {
+      console.log(`Wrote ${written.map((name) => join(outDir, name)).join(', ')}`);
+    }
+    if (missing.length) {
+      console.log(`Did NOT write ${missing.map((name) => join(outDir, name)).join(', ')}`);
+    }
+  } finally {
+    rl.close();
+  }
 }
 
 if (process.argv[1]?.replace(/\\/g, '/').endsWith('cleaner/index.ts')) {

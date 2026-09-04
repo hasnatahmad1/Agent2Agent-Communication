@@ -112,7 +112,11 @@ export class CleanSession {
         name: 'preview_changes',
         description:
           'Show how many rows a rule would change, with up to 5 before/after examples. Does not modify the dataset.',
-        schema: { rule: z.record(z.string(), z.unknown()).describe('A single cleaning rule') },
+        // z.record(...) here breaks MCP tool discovery entirely (the whole
+        // server's tool list comes back empty) when converted to a JSON
+        // schema for the CLI subprocess. z.object({}).passthrough() accepts
+        // the same free-form object shape and survives that conversion.
+        schema: { rule: z.object({}).passthrough().describe('A single cleaning rule') },
         handler: async ({ rule }) => {
           this.requireLoaded();
           const validated = this.validateRule(rule);
@@ -126,7 +130,11 @@ export class CleanSession {
       {
         name: 'apply_rule',
         description: 'Apply one cleaning rule to the working dataset.',
-        schema: { rule: z.record(z.string(), z.unknown()).describe('A single cleaning rule') },
+        // z.record(...) here breaks MCP tool discovery entirely (the whole
+        // server's tool list comes back empty) when converted to a JSON
+        // schema for the CLI subprocess. z.object({}).passthrough() accepts
+        // the same free-form object shape and survives that conversion.
+        schema: { rule: z.object({}).passthrough().describe('A single cleaning rule') },
         handler: async ({ rule }) => {
           this.requireLoaded();
           const validated = this.validateRule(rule);

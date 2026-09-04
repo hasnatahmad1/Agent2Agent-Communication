@@ -23,6 +23,11 @@ export class AgentSdkLLM implements LLM {
             name: SERVER_NAME,
             version: '1.0.0',
             tools: sdkTools,
+            // Without this, tools are deferred behind a "tool search" meta-tool —
+            // but `tools: []` below disables that meta-tool too, so the model
+            // never discovers our tools exist at all and fabricates a transcript
+            // instead of calling them.
+            alwaysLoad: true,
           }),
         }
       : undefined;
@@ -45,6 +50,10 @@ export class AgentSdkLLM implements LLM {
         permissionMode: 'bypassPermissions',
         // Do not inherit the developer's CLAUDE.md, settings, or plugins.
         settingSources: [],
+        // Ignore project/user/plugin MCP config (e.g. globally-configured
+        // connectors) — otherwise Claude sees those servers listed alongside
+        // ours and can mistake them for its actual toolset.
+        strictMcpConfig: true,
         maxTurns: request.maxTurns ?? 30,
       },
     });
