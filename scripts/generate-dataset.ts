@@ -76,8 +76,8 @@ export function generateDataset(): { headers: string[]; rows: Row[] } {
     let marks = String(35 + Math.floor(rand() * 61));
     const marksStyle = rand();
     if (marksStyle < 0.032) marks = String(101 + Math.floor(rand() * 10));
-    else if (marksStyle < 0.06) marks = String(-1 - Math.floor(rand() * 8));
-    else if (marksStyle < 0.049) marks = MISSING[Math.floor(rand() * MISSING.length)];
+    else if (marksStyle < 0.049) marks = String(-1 - Math.floor(rand() * 8));
+    else if (marksStyle < 0.077) marks = MISSING[Math.floor(rand() * MISSING.length)];
 
     const enrolled = reformat(isoDate(rand), Math.floor(rand() * 3));
 

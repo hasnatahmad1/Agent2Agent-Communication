@@ -3,399 +3,399 @@ roll_no,name,email,age,city,marks,enrolled_date
 1001,Usman Raza,usman.raza@uni.edu.pk,24,NULL,46,2024-08-07
 1002,Noor Malik,noor.malik@uni.edu.pk,21,Lahore,40,"January 6, 2024"
 1003,Bilal Raza,bilal.raza@uni.edu.pk,19,Peshawar,92,"April 28, 2024"
-1004,Usman Qureshi,usman.qureshi@uni.edu.pk,20,N/A,86,"April 18, 2024"
-1005,Saad Sheikh,saad.sheikh@uni.edu.pk,21,Multan,74,03/07/2024
-1006,Hamza Raza,hamza.raza@uni.edu.pk,20,Karachi,44,2024-01-14
-1007,Noor Malik,noor.malik@uni.edu.pk,-5,NULL,79,03/07/2024
-1008,Noor Ahmed,noor.uni.edu.pk,21," Lahore ",74,2024-02-23
-1009,Hina Malik,hina.malik@uni.edu.pk,25,LHR,90,23/12/2024
-1010,Ali Malik,ali.malik@uni.edu.pk,25,Peshawar,57,2024-10-12
-1011,Hamza Ahmed,hamza.ahmed@uni.edu.pk,19,Karachi,90,10/05/2024
-1012,Maryam Butt,maryam.butt@uni.edu.pk,23,Peshawar,41,11/08/2024
-1013,Ali Qureshi,ali.qureshi@uni.edu.pk,24,Multan,73,2024-02-22
-1014,Hamza Sheikh,hamza.sheikh@uni.edu.pk,twenty,Multan,38,11/09/2024
-1015,Ali Butt,ali.butt@uni.edu.pk,20,Karachi,41,"March 2, 2024"
-1016,Sara Chaudhry,sara.chaudhry@uni.edu.pk,19,Karachi,61,"April 21, 2024"
-1017,Sara Chaudhry,sara.chaudhry@uni.edu.pk,23,Karachi,92,2024-02-20
-1018,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,18,Karachi,89,"March 1, 2024"
-1019,Ali Ahmed,ali.ahmed@uni.edu.pk,-,ISB,89,"July 28, 2024"
-1020,Usman Raza,usman.raza@uni.edu.pk,18,Lahore,71,2024-08-14
-1021,Hina Ahmed,hina.ahmed@uni.edu.pk,18,,54,"December 5, 2024"
-1022,Ali Ahmed,ali.ahmed@uni.edu.pk,25,Karachi,87,10/01/2024
-1023,Usman Chaudhry,usman.chaudhry@uni.edu.pk,18,N/A,57,03/06/2024
-1024,Talha Khan,talha.khan@uni.edu.pk,23,Peshawar,71,02/03/2024
-1025,Sara Chaudhry,sara.chaudhry@uni.edu.pk,21,Karachi,88,23/12/2024
-1026,Ali Qureshi,ali.qureshi@uni.edu.pk,20,Islamabad,79,2024-08-03
-1027,Omar Butt,omar.butt@uni.edu.pk,21,Lahore,52,2024-01-21
-1028,Omar Khan,omar.khan@uni.edu.pk,20,Karachi,92,"December 12, 2024"
-1029,Bilal Khan,bilal.khan@uni.edu.pk,19,Karachi,81,2024-11-03
-1030,Hina Ahmed,hina.ahmed@uni.edu.pk,18,lahore,52,2024-03-04
-1031,Talha Khan,talha.khan@uni.edu.pk,23,Peshawar,46,"June 27, 2024"
-1032,Maryam Qureshi,maryam.qureshi@uni.edu.pk,25,NULL,60,"May 25, 2024"
-1033,Noor Ahmed,noor.ahmed@uni.edu.pk,22,LHR,88,"June 26, 2024"
-1034,"  TALHA SHEIKH ",talha.sheikh@uni.edu.pk,twenty,LHR,78,"April 16, 2024"
-1035,Ahmed Khan,ahmed.khan@uni.edu.pk,NULL,Islamabad,-3,15/01/2024
-1036,"  BILAL RAZA ",bilal.raza@uni.edu.pk,21,Multan,66,07/09/2024
-1037,Omar Khan,omar.khan@uni.edu.pk,23,Peshawar,74,2024-02-01
-1038,"  AYESHA AHMED ",ayesha.ahmed@uni.edu.pk,24,lahore,69,2024-05-17
-1039,Noor Chaudhry,noor.chaudhry@uni.edu.pk,23,ISB,88,14/07/2024
-1040,Saad Qureshi,saad.qureshi@uni.edu.pk,19,Peshawar,68,"December 7, 2024"
-1041,Zainab Sheikh,zainab.sheikh@uni.edu.pk,20,khi,90,"November 25, 2024"
-1042,Ali Butt,ali.butt@uni.edu.pk,23,Multan,69,"October 13, 2024"
-1043,Hamza Sheikh,hamza.sheikh@uni.edu.pk,23,ISB,94,02/01/2024
-1044,Zainab Sheikh,zainab.sheikh@uni.edu.pk,18,Multan,76,"June 5, 2024"
-1045,Sara Butt,sara.butt@uni.edu.pk,twenty,Islamabad,92,26/10/2024
-1046,Zainab Raza,zainab.raza@uni.edu.pk,21,Lahore,53,2024-08-05
-1047,Hamza Ahmed,hamza.ahmed@uni.edu.pk,19,karachi,73,2024-12-19
-1048,Iqra Raza,iqra.raza@uni.edu.pk,NULL,ISB,47,16/06/2024
-1049,Sara Ahmed,sara.ahmed@uni.edu.pk,18,NULL,79,24/04/2024
-1050,Ahmed Butt,ahmed.butt@uni.edu.pk,19,karachi,49,03/04/2024
-1051,Hina Malik,hina.malik@uni.edu.pk,19,Islamabad,83,"August 27, 2024"
-1052,Maryam Raza,maryam.raza@uni.edu.pk,23,Peshawar,87,21/07/2024
-1053,Maryam Raza,maryam.raza@uni.edu.pk,23,LHR,36,26/06/2024
-1054,Bilal Raza,bilal.raza@uni.edu.pk,18,Islamabad,52,06/08/2024
-1055,omar ahmed,omar.ahmed@uni.edu.pk,twenty,Peshawar,63,"January 22, 2024"
-1056,fatima qureshi,fatima.qureshi@uni.edu.pk,19,Peshawar,89,"April 22, 2024"
-1057,Ahmed Raza,ahmed.raza@uni.edu.pk,21,ISB,39,03/08/2024
-1058,Zainab Raza,zainab.raza@uni.edu.pk,22,Multan,81,2024-02-17
-1059,Saad Malik,saad.malik@uni.edu.pk,twenty,Multan,67,01/08/2024
-1060,Iqra Khan,iqra.khan@uni.edu.pk,19,khi,64,2024-12-26
-1061,"  HAMZA BUTT ",hamza.uni.edu.pk,23,khi,62,03/08/2024
-1062,sara chaudhry,sara.chaudhry@uni.edu.pk,21,lahore,84,"January 26, 2024"
-1063,Hamza Qureshi,hamza.qureshi@uni.edu.pk,22,lahore,77,"December 8, 2024"
-1064,Fatima Khan,fatima.khan@uni.edu.pk,23,Lahore,80,"May 10, 2024"
-1065,Noor Khan,noor.khan@uni.edu.pk,25," Lahore ",41,14/09/2024
-1066,Saad Raza,saad.raza@uni.edu.pk,20,Lahore,86,2024-05-04
-1067,Fatima Khan,fatima.khan@uni.edu.pk,18,Karachi,73,2024-08-17
-1068,Usman Khan,usman.khan@uni.edu.pk,23,LHR,90,"August 28, 2024"
-1069,Noor Malik,noor.malik@uni.edu.pk,twenty,Karachi,57,"August 15, 2024"
-1070,Usman Chaudhry,usman.chaudhry@uni.edu.pk,NULL,khi,69,2024-03-05
-1071,Hamza Malik,hamza.malik@uni.edu.pk,18,karachi,44,26/01/2024
-1072,Iqra Butt,iqra.uni.edu.pk,25,Karachi,81,2024-04-13
-1073,Saad Malik,saad.malik@uni.edu.pk,19,Islamabad,75,01/10/2024
-1074,Talha Chaudhry,talha.chaudhry@uni.edu.pk,23,Lahore,91,"January 25, 2024"
-1075,Hamza Malik,hamza.malik@uni.edu.pk,19,karachi,82,"April 1, 2024"
-1076,Ahmed Butt,ahmed.butt@uni.edu.pk,23,Peshawar,35,08/12/2024
-1077,Iqra Ahmed,iqra.ahmed@uni.edu.pk,20,Islamabad,39,01/08/2024
-1078,"  OMAR CHAUDHRY ",omar.chaudhry@uni.edu.pk,19,ISB,94,"July 20, 2024"
-1079,Sara Ahmed,sara.ahmed@uni.edu.pk,N/A,-,42,"April 8, 2024"
-1080,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,21,Islamabad,70,2024-11-07
-1081,Sara Sheikh,sara.sheikh@uni.edu.pk,19,Multan,84,2024-06-05
-1082,Bilal Khan,bilal.khan@uni.edu.pk,24,Islamabad,48,2024-12-10
-1083,Bilal Sheikh,bilal.sheikh@uni.edu.pk,20,Peshawar,-1,14/06/2024
-1084,Ayesha Qureshi,ayesha.qureshi@uni.edu.pk,23,Multan,66,08/02/2024
-1085,Hina Malik,hina.malik@uni.edu.pk,24,Islamabad,92,2024-06-15
-1086,"  NOOR SHEIKH ",noor.sheikh@uni.edu.pk,18,khi,82,"January 10, 2024"
-1087,fatima qureshi,fatima.qureshi@uni.edu.pk,23," Lahore ",48,2024-06-22
-1088,Omar Butt,omar.butt@uni.edu.pk,25,Multan,75,2024-09-15
-1089,Talha Malik,talha.malik@uni.edu.pk,24,Multan,71,2024-05-11
-1090,talha chaudhry,talha.chaudhry@uni.edu.pk,24,Peshawar,85,2024-12-16
-1091,Saad Sheikh,saad.sheikh@uni.edu.pk,25,Karachi,58,11/11/2024
-1092,Sara Sheikh,sara.sheikh@uni.edu.pk,24,karachi,-3,2024-06-17
-1093,Talha Butt,talha.butt@uni.edu.pk,24,Lahore,95,"September 1, 2024"
-1094,Maryam Raza,maryam.raza@uni.edu.pk,24,lahore,70,"May 18, 2024"
-1095,Zainab Butt,zainab.butt@uni.edu.pk,25,Multan,48,"October 28, 2024"
-1096,Fatima Chaudhry,fatima@,18,Islamabad,74,2024-11-13
-1097,Ayesha Khan,ayesha.khan@uni.edu.pk,NULL,Lahore,48,2024-08-21
-1098,Omar Chaudhry,omar.chaudhry@uni.edu.pk,21,Islamabad,70,2024-09-24
-1099,Iqra Malik,iqra.malik@uni.edu.pk,25,Karachi,69,2024-10-15
-1100,Ali Khan,ali.khan@uni.edu.pk,22,Multan,82,02/08/2024
-1101,Hamza Ahmed,hamza.ahmed@uni.edu.pk,23,Karachi,68,"January 28, 2024"
-1102,Iqra Ahmed,iqra.ahmed@uni.edu.pk,22,Multan,62,20/06/2024
-1103,noor raza,noor.raza@uni.edu.pk,23,Islamabad,45,09/04/2024
-1104,Ali Qureshi,ali.qureshi@uni.edu.pk,18,Peshawar,89,"September 17, 2024"
-1105,Hamza Raza,hamza@,21,lahore,88,"August 28, 2024"
-1106,Hamza Raza,hamza.raza@uni.edu.pk,-,Lahore,39,07/12/2024
-1107,Ayesha Raza,ayesha@,20,Peshawar,36,"September 10, 2024"
-1108,Bilal Qureshi,bilal.qureshi@uni.edu.pk,19,Islamabad,92,"May 19, 2024"
-1109,"  SARA BUTT ",sara.butt@uni.edu.pk,21," Lahore ",60,2024-10-22
-1110,Maryam Raza,maryam.raza@uni.edu.pk,23,Karachi,56,2024-10-20
-1111,Maryam Ahmed,maryam.ahmed@uni.edu.pk,22,Multan,51,"November 10, 2024"
-1112,Saad Chaudhry,saad.chaudhry@uni.edu.pk,19,Karachi,-3,13/04/2024
-1113,Fatima Raza,fatima.raza@uni.edu.pk,-5,Karachi,71,2024-03-01
-1114,Bilal Qureshi,bilal.qureshi@uni.edu.pk,24,Peshawar,86,2024-09-21
-1115,Hina Sheikh,hina.sheikh@uni.edu.pk,23,Peshawar,82,09/12/2024
-1116,Hina Raza,hina.raza@uni.edu.pk,18,Lahore,43,"December 22, 2024"
-1117,Hina Raza,hina.raza@uni.edu.pk,23,lahore,107,21/08/2024
-1118,Hina Sheikh,hina.sheikh@uni.edu.pk,25,-,94,2024-07-20
-1119,Saad Qureshi,saad.qureshi@uni.edu.pk,18,Multan,47,2024-02-15
-1120,Sara Qureshi,sara.qureshi@uni.edu.pk,N/A,Multan,37,2024-09-27
-1121,Omar Malik,omar.malik@uni.edu.pk,twenty,Karachi,40,2024-11-24
-1122,Ayesha Raza,ayesha.raza@uni.edu.pk,19,ISB,80,"January 26, 2024"
-1123,Ali Sheikh,ali.sheikh@uni.edu.pk,18," Lahore ",94,2024-11-12
-1124,Usman Sheikh,usman.sheikh@uni.edu.pk,20,Multan,82,"April 18, 2024"
-1125,Ahmed Butt,ahmed.butt@uni.edu.pk,25,Multan,36,"September 15, 2024"
-1126,Saad Raza,saad.raza@uni.edu.pk,21,Peshawar,65,"September 13, 2024"
-1127,Noor Butt,noor.butt@uni.edu.pk,18,Lahore,59,20/08/2024
-1128,Ayesha Butt,ayesha.butt@uni.edu.pk,22,Karachi,90,28/06/2024
-1129,Sara Chaudhry,sara.chaudhry@uni.edu.pk,19,Lahore,77,03/06/2024
-1130,Zainab Khan,zainab.khan@uni.edu.pk,19,Karachi,47,2024-07-22
-1131,Usman Qureshi,usman.qureshi@uni.edu.pk,19,Peshawar,47,02/12/2024
-1132,Ali Chaudhry,ali.chaudhry@uni.edu.pk,-,LHR,78,05/05/2024
-1133,Talha Sheikh,talha.sheikh@uni.edu.pk,24,Karachi,59,"January 1, 2024"
-1134,Omar Khan,omar.khan@uni.edu.pk,22,Lahore,92,"January 12, 2024"
-1135,Hina Ahmed,hina.uni.edu.pk,21,khi,89,2024-03-18
-1136,Iqra Ahmed,iqra.ahmed@uni.edu.pk,23," Lahore ",62,"February 12, 2024"
-1137,Bilal Qureshi,bilal.qureshi@uni.edu.pk,20,LHR,43,03/03/2024
-1138,Maryam Sheikh,maryam.sheikh@uni.edu.pk,19," Lahore ",57,"April 18, 2024"
-1139,Fatima Sheikh,fatima.sheikh@uni.edu.pk,22,Islamabad,85,2024-09-26
-1140,Omar Butt,omar.butt@uni.edu.pk,20,,92,"April 8, 2024"
-1141,Usman Qureshi,usman.qureshi@uni.edu.pk,18,Islamabad,43,2024-05-13
-1142,Noor Ahmed,noor.ahmed@uni.edu.pk,20,Peshawar,41,"July 2, 2024"
-1143,Noor Sheikh,noor.sheikh@uni.edu.pk,25,Islamabad,74,"January 18, 2024"
-1144,Talha Ahmed,talha.ahmed@uni.edu.pk,twenty,Lahore,37,"March 27, 2024"
-1145,Hina Khan,hina.khan@uni.edu.pk,24,Multan,69,2024-05-02
-1146,Maryam Ahmed,maryam.ahmed@uni.edu.pk,-,ISB,47,"May 20, 2024"
-1147,Maryam Sheikh,maryam.sheikh@uni.edu.pk,19,Karachi,79,2024-09-14
-1148,Ali Chaudhry,ali.chaudhry@uni.edu.pk,-,Lahore,88,2024-03-24
-1149,Talha Khan,talha.khan@uni.edu.pk,24,Multan,44,15/06/2024
-1150,hina sheikh,hina.sheikh@uni.edu.pk,24,Islamabad,83,"July 24, 2024"
-1151,Hamza Butt,hamza.butt@uni.edu.pk,23,Lahore,41,"April 27, 2024"
-1152,Saad Butt,saad.butt@uni.edu.pk,20,,85,09/07/2024
-1153,Hina Sheikh,hina.sheikh@uni.edu.pk,20,Lahore,71,28/08/2024
-1154,Bilal Khan,bilal.khan@uni.edu.pk,21,N/A,80,"January 11, 2024"
-1155,maryam butt,maryam.butt@uni.edu.pk,22,Lahore,75,10/01/2024
-1156,Fatima Ahmed,fatima@,20,Multan,94,2024-12-10
-1157,Saad Ahmed,saad.ahmed@uni.edu.pk,25,Islamabad,74,2024-03-25
-1158,"  AYESHA BUTT ",ayesha.butt@uni.edu.pk,23,Karachi,61,"August 27, 2024"
-1159,Maryam Qureshi,maryam.qureshi@uni.edu.pk,24,Karachi,80,"March 26, 2024"
-1160,Sara Ahmed,sara.ahmed@uni.edu.pk,21,Islamabad,41,"January 3, 2024"
-1161,Iqra Sheikh,iqra.sheikh@uni.edu.pk,25,Peshawar,37,2024-10-24
-1162,Sara Sheikh,sara.sheikh@uni.edu.pk,23,Peshawar,68,2024-10-05
-1163,Hamza Sheikh,hamza.sheikh@uni.edu.pk,24,Islamabad,88,"February 21, 2024"
-1164,Hamza Butt,hamza.butt@uni.edu.pk,21,,94,2024-01-25
-1165,Saad Raza,saad.raza@uni.edu.pk,18,Karachi,94,09/12/2024
-1166,Ahmed Sheikh,ahmed.sheikh@uni.edu.pk,22,Lahore,59,"August 26, 2024"
-1167,"  FATIMA MALIK ",fatima.malik@uni.edu.pk,18,Lahore,35,"July 26, 2024"
-1168,Bilal Butt,bilal.butt@uni.edu.pk,N/A,Karachi,61,19/08/2024
-1169,hina sheikh,hina.sheikh@uni.edu.pk,19,Karachi,93,08/10/2024
-1170,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,N/A,karachi,63,2024-01-07
-1171,Hamza Khan,hamza.khan@uni.edu.pk,23,Peshawar,58,26/11/2024
-1172,Iqra Sheikh,iqra.sheikh@uni.edu.pk,21,Karachi,82,2024-03-27
-1173,Omar Malik,omar.malik@uni.edu.pk,20,Multan,54,"December 23, 2024"
-1174,Hamza Raza,hamza.raza@uni.edu.pk,21,Karachi,46,2024-10-23
-1175,Maryam Sheikh,maryam.sheikh@uni.edu.pk,21,Lahore,85,"December 11, 2024"
-1176,Bilal Raza,bilal.raza@uni.edu.pk,18,lahore,95,"March 3, 2024"
-1177,Saad Chaudhry,saad.chaudhry@uni.edu.pk,N/A,Islamabad,54,2024-07-16
-1178,Maryam Chaudhry,maryam.chaudhry@uni.edu.pk,25,lahore,71,2024-10-03
-1179,hamza khan,hamza.khan@uni.edu.pk,18,Lahore,95,14/12/2024
-1180,Hina Ahmed,hina.ahmed@uni.edu.pk,22,Peshawar,87,2024-11-26
-1181,"  IQRA BUTT ",iqra.butt@uni.edu.pk,22,Lahore,47,"May 8, 2024"
-1182,Hamza Raza,hamza.raza@uni.edu.pk,25,ISB,37,18/08/2024
-1183,Hamza Butt,hamza.butt@uni.edu.pk,22,Multan,80,"November 19, 2024"
-1184,omar khan,omar.khan@uni.edu.pk,18,Multan,42,09/06/2024
-1185,"  FATIMA CHAUDHRY ",fatima.chaudhry@uni.edu.pk,18,Karachi,74,2024-03-17
-1186,Hamza Sheikh,hamza.sheikh@uni.edu.pk,23,Multan,51,"June 7, 2024"
-1187,Ahmed Chaudhry,ahmed.chaudhry@uni.edu.pk,20,ISB,77,13/10/2024
-1188,Hamza Khan,hamza.khan@uni.edu.pk,18,Islamabad,38,"February 26, 2024"
-1189,talha butt,talha.butt@uni.edu.pk,23,lahore,55,"November 1, 2024"
-1190,Noor Malik,noor.malik@uni.edu.pk,N/A,Multan,91,2024-11-19
-1191,Ali Sheikh,ali.sheikh@uni.edu.pk,18,Multan,64,"October 11, 2024"
-1192,Usman Sheikh,usman.sheikh@uni.edu.pk,22,LHR,72,2024-02-09
-1193,Saad Malik,saad.malik@uni.edu.pk,24,Islamabad,59,"September 17, 2024"
-1194,Ayesha Chaudhry,ayesha.chaudhry@uni.edu.pk,21,Lahore,76,2024-11-13
-1195,Ahmed Qureshi,ahmed.qureshi@uni.edu.pk,20,Lahore,103,2024-07-02
-1196,Fatima Sheikh,fatima.sheikh@uni.edu.pk,20,Multan,-7,2024-10-08
-1197,Sara Khan,sara.khan@uni.edu.pk,18,-,66,25/12/2024
-1198,Bilal Sheikh,bilal.sheikh@uni.edu.pk,21,khi,88,"August 6, 2024"
-1199,Sara Raza,sara.raza@uni.edu.pk,22,khi,49,"November 9, 2024"
-1200,Hamza Malik,hamza.malik@uni.edu.pk,19,Multan,58,27/04/2024
-1201,"  SAAD KHAN ",saad.khan@uni.edu.pk,25,Peshawar,37,"February 1, 2024"
-1202,Usman Ahmed,usman.ahmed@uni.edu.pk,20,Multan,89,11/03/2024
-1203,Bilal Khan,bilal.khan@uni.edu.pk,18,Karachi,73,"November 6, 2024"
-1204,"  AYESHA AHMED ",ayesha.ahmed@uni.edu.pk,22 years,-,65,05/08/2024
-1205,Noor Malik,noor.malik@uni.edu.pk,21,Peshawar,74,11/11/2024
-1206,Ayesha Ahmed,ayesha.ahmed@uni.edu.pk,twenty,Lahore,83,28/07/2024
-1207,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,23,khi,75,2024-01-25
-1208,iqra raza,iqra.raza@uni.edu.pk,25,Lahore,63,"November 1, 2024"
-1209,Maryam Khan,maryam.khan@uni.edu.pk,18," Lahore ",38,2024-11-17
-1210,Hina Qureshi,hina.qureshi@uni.edu.pk,22,Peshawar,80,26/09/2024
-1211,Hamza Raza,hamza.raza@uni.edu.pk,19,Lahore,55,13/02/2024
-1212,Hina Ahmed,hina.ahmed@uni.edu.pk,25,Islamabad,63,"June 13, 2024"
-1213,Zainab Malik,zainab.malik@uni.edu.pk,18,Lahore,93,03/10/2024
-1214,Talha Ahmed,talha.ahmed@uni.edu.pk,19,Multan,35,21/04/2024
-1215,Iqra Sheikh,iqra.sheikh@uni.edu.pk,twenty,Lahore,76,"October 10, 2024"
-1216,Zainab Khan,zainab.khan@uni.edu.pk,21,Islamabad,92,2024-12-08
-1217,Sara Chaudhry,sara.uni.edu.pk,21,Peshawar,55,2024-09-20
-1218,Sara Butt,sara.butt@uni.edu.pk,24,Lahore,46,"January 16, 2024"
-1219,Saad Butt,saad.butt@uni.edu.pk,21,Multan,83,03/09/2024
-1220,Ayesha Raza,ayesha.raza@uni.edu.pk,19,Lahore,78,2024-09-02
-1221,Saad Chaudhry,saad.chaudhry@uni.edu.pk,25,Peshawar,55,11/10/2024
-1222,Zainab Ahmed,zainab.ahmed@uni.edu.pk,18,Peshawar,95,16/01/2024
-1223,Hina Qureshi,hina@,25,Multan,81,2024-06-01
-1224,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Lahore,67,2024-05-12
-1225,bilal khan,bilal.khan@uni.edu.pk,24,Peshawar,37,02/09/2024
-1226,Ali Qureshi,ali.qureshi@uni.edu.pk,19,Multan,80,"July 4, 2024"
-1227,Noor Khan,noor.khan@uni.edu.pk,18,Karachi,93,"February 16, 2024"
-1228,Noor Qureshi,noor.qureshi@uni.edu.pk,25,khi,60,2024-02-15
-1229,Ayesha Raza,ayesha.raza@uni.edu.pk,N/A,Islamabad,88,2024-04-20
-1230,Omar Butt,omar.butt@uni.edu.pk,24,karachi,39,"June 23, 2024"
-1231,Bilal Sheikh,bilal.sheikh@uni.edu.pk,21,Multan,66,2024-10-20
-1232,Ahmed Malik,ahmed.malik@uni.edu.pk,22,LHR,73,19/04/2024
-1233,Hamza Qureshi,hamza.qureshi@uni.edu.pk,19,Multan,48,2024-11-18
-1234,Maryam Raza,maryam.raza@uni.edu.pk,24," Lahore ",41,"April 19, 2024"
-1235,Fatima Qureshi,fatima.qureshi@uni.edu.pk,22,Multan,45,"August 4, 2024"
-1236,Talha Ahmed,talha.ahmed@uni.edu.pk,24,Islamabad,79,2024-11-14
-1237,Noor Butt,noor.butt@uni.edu.pk,23,-,78,"April 12, 2024"
-1238,Omar Butt,omar.butt@uni.edu.pk,25,LHR,86,"February 2, 2024"
-1239,Maryam Qureshi,maryam.qureshi@uni.edu.pk,20,Multan,47,2024-01-25
-1240,"  ZAINAB MALIK ",zainab.malik@uni.edu.pk,20,khi,35,"September 23, 2024"
-1241,Iqra Butt,iqra.butt@uni.edu.pk,20,Lahore,43,2024-03-28
-1242,Saad Ahmed,saad.ahmed@uni.edu.pk,23,Multan,88,"January 22, 2024"
-1243,Talha Chaudhry,talha.chaudhry@uni.edu.pk,20,Multan,42,07/10/2024
-1244,Bilal Sheikh,bilal.sheikh@uni.edu.pk,19,Karachi,68,2024-07-16
-1245,Ali Ahmed,ali.ahmed@uni.edu.pk,25,khi,55,"December 1, 2024"
-1246,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,18,ISB,-8,"March 18, 2024"
-1247,Maryam Ahmed,maryam.ahmed@uni.edu.pk,23,Karachi,66,09/01/2024
-1248,Iqra Khan,iqra.khan@uni.edu.pk,N/A,Lahore,50,2024-01-27
-1249,Fatima Malik,fatima.malik@uni.edu.pk,20,Lahore,68,10/02/2024
-1250,"  HAMZA QURESHI ",hamza.qureshi@uni.edu.pk,21,Lahore,37,2024-01-21
-1251,Hamza Ahmed,hamza.ahmed@uni.edu.pk,250,Multan,86,11/04/2024
-1252,Fatima Ahmed,fatima.ahmed@uni.edu.pk,19,Lahore,-1,27/05/2024
-1253,Zainab Qureshi,zainab.qureshi@uni.edu.pk,18,Lahore,37,"July 28, 2024"
-1254,Zainab Malik,zainab@,21,Lahore,53,07/12/2024
-1255,Talha Khan,talha.khan@uni.edu.pk,22,N/A,61,2024-11-09
-1256,Bilal Raza,bilal.raza@uni.edu.pk,22,karachi,80,2024-06-02
-1257,Hamza Butt,hamza.butt@uni.edu.pk,18,NULL,50,2024-02-22
-1258,Usman Malik,usman.malik@uni.edu.pk,18,Multan,58,17/07/2024
-1259,Ayesha Chaudhry,ayesha.chaudhry@uni.edu.pk,22,Karachi,36,21/03/2024
-1260,Usman Raza,usman.raza@uni.edu.pk,25,Multan,69,"June 15, 2024"
-1261,Talha Chaudhry,talha.chaudhry@uni.edu.pk,25,Multan,55,2024-04-19
-1262,Fatima Chaudhry,fatima.chaudhry@uni.edu.pk,18,karachi,70,05/02/2024
-1263,Saad Sheikh,saad.sheikh@uni.edu.pk,25,Karachi,46,"March 7, 2024"
-1264,Maryam Butt,maryam.butt@uni.edu.pk,20,Islamabad,68,"March 6, 2024"
-1265,"  ALI MALIK ",ali.malik@uni.edu.pk,24,Islamabad,61,08/08/2024
-1266,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Karachi,37,"August 17, 2024"
-1267,"  HINA CHAUDHRY ",hina.chaudhry@uni.edu.pk,23,Peshawar,94,"July 24, 2024"
-1268,Talha Khan,talha.khan@uni.edu.pk,twenty,Peshawar,35,2024-11-01
-1269,talha sheikh,talha.sheikh@uni.edu.pk,23,khi,56,2024-04-11
-1270,Hamza Chaudhry,hamza.chaudhry@uni.edu.pk,25,Multan,74,2024-09-13
-1271,Ali Butt,ali.butt@uni.edu.pk,23,karachi,54,"October 10, 2024"
-1272,Zainab Ahmed,zainab@,18,lahore,61,"December 3, 2024"
-1273,Hamza Butt,hamza@,21,Islamabad,60,2024-09-07
-1274,"  ZAINAB QURESHI ",zainab.qureshi@uni.edu.pk,18,Multan,61,"November 2, 2024"
-1275,Hamza Raza,hamza.raza@uni.edu.pk,23,N/A,79,"February 7, 2024"
-1276,Fatima Ahmed,fatima.ahmed@uni.edu.pk,18,lahore,87,01/09/2024
-1277,Iqra Ahmed,iqra.ahmed@uni.edu.pk,19,lahore,36,"April 7, 2024"
-1278,Sara Raza,sara.raza@uni.edu.pk,23,LHR,37,2024-12-18
-1279,Saad Malik,saad.malik@uni.edu.pk,19,Islamabad,50,06/02/2024
-1280,"  HINA QURESHI ",hina.qureshi@uni.edu.pk,24,Lahore,74,"November 24, 2024"
-1281,Talha Butt,talha.butt@uni.edu.pk,22 years,Peshawar,76,"March 6, 2024"
-1282,Hina Malik,hina.malik@uni.edu.pk,23,Karachi,62,"July 28, 2024"
-1283,Bilal Ahmed,bilal.ahmed@uni.edu.pk,25,Lahore,59,26/04/2024
-1284,Saad Sheikh,saad.uni.edu.pk,20,Multan,48,19/09/2024
-1285,Ahmed Raza,ahmed.raza@uni.edu.pk,21,Lahore,74,2024-05-19
-1286,Hina Chaudhry,hina.chaudhry@uni.edu.pk,20,Multan,43,2024-08-05
-1287,"  SAAD KHAN ",saad.khan@uni.edu.pk,22,Karachi,43,13/09/2024
-1288,Zainab Ahmed,zainab.ahmed@uni.edu.pk,21,N/A,64,12/10/2024
-1289,"  BILAL CHAUDHRY ",bilal.chaudhry@uni.edu.pk,18,Islamabad,44,2024-12-12
-1290,Saad Malik,saad@,23," Lahore ",81,2024-08-28
-1291,"  USMAN CHAUDHRY ",usman.chaudhry@uni.edu.pk,25,khi,73,2024-01-17
-1292,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Peshawar,64,"August 27, 2024"
-1293,saad khan,saad.khan@uni.edu.pk,21,Lahore,49,"September 28, 2024"
-1294,Talha Butt,talha.butt@uni.edu.pk,25,Multan,89,21/04/2024
-1295,Zainab Khan,zainab.khan@uni.edu.pk,20,Peshawar,86,2024-04-08
-1296,Noor Ahmed,noor.ahmed@uni.edu.pk,23,Peshawar,66,"April 10, 2024"
-1297,Ayesha Qureshi,ayesha.qureshi@uni.edu.pk,18,Peshawar,80,"June 16, 2024"
-1298,Zainab Sheikh,zainab.sheikh@uni.edu.pk,25,Peshawar,77,"May 13, 2024"
-1299,Ahmed Butt,ahmed.butt@uni.edu.pk,25,Karachi,95,2024-02-02
-1300,Maryam Khan,maryam.uni.edu.pk,20,Multan,58,"May 19, 2024"
-1301,Omar Butt,omar.butt@uni.edu.pk,18,Peshawar,91,"June 11, 2024"
-1302,Ahmed Malik,ahmed.malik@uni.edu.pk,24,Karachi,44,10/07/2024
-1303,Talha Chaudhry,talha.chaudhry@uni.edu.pk,24,Karachi,68,"June 15, 2024"
-1304,Iqra Ahmed,iqra.ahmed@uni.edu.pk,N/A,,47,"April 3, 2024"
-1305,Usman Butt,usman.butt@uni.edu.pk,21,Multan,78,"November 25, 2024"
-1306,Fatima Sheikh,fatima.sheikh@uni.edu.pk,NULL,Lahore,76,"February 17, 2024"
-1307,Zainab Khan,zainab.khan@uni.edu.pk,20,Multan,38,"November 27, 2024"
-1308,Hamza Khan,hamza.khan@uni.edu.pk,21,Lahore,44,"January 13, 2024"
-1309,sara qureshi,sara.qureshi@uni.edu.pk,22,Lahore,93,"March 11, 2024"
-1310,"  OMAR AHMED ",omar.ahmed@uni.edu.pk,22,khi,45,"January 11, 2024"
-1311,Ahmed Chaudhry,ahmed.chaudhry@uni.edu.pk,25,Islamabad,53,2024-12-07
-1312,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,18,Karachi,85,28/02/2024
-1313,Hamza Butt,hamza.butt@uni.edu.pk,23,karachi,86,15/08/2024
-1314,"  AYESHA QURESHI ",ayesha.qureshi@uni.edu.pk,21," Lahore ",59,"December 24, 2024"
-1315,Hamza Malik,hamza.malik@uni.edu.pk,21,Islamabad,63,2024-03-28
-1316,Hamza Qureshi,hamza.qureshi@uni.edu.pk,19,Peshawar,41,"January 6, 2024"
-1317,Omar Ahmed,omar@,22,khi,78,24/06/2024
-1318,Sara Sheikh,sara.sheikh@uni.edu.pk,19,Lahore,68,04/02/2024
-1319,"  NOOR CHAUDHRY ",noor.chaudhry@uni.edu.pk,20,Islamabad,89,"December 22, 2024"
-1320,Hina Malik,hina.malik@uni.edu.pk,19,khi,109,22/01/2024
-1321,Iqra Raza,iqra.raza@uni.edu.pk,22,Lahore,65,28/12/2024
-1322,Saad Sheikh,saad.sheikh@uni.edu.pk,-,Islamabad,56,2024-10-15
-1323,Noor Malik,noor.malik@uni.edu.pk,23,Multan,50,"December 15, 2024"
-1324,Hina Chaudhry,hina.chaudhry@uni.edu.pk,25,Peshawar,93,2024-04-08
-1325,Fatima Butt,fatima.butt@uni.edu.pk,20,Multan,46,2024-03-13
-1326,Bilal Sheikh,bilal.sheikh@uni.edu.pk,22,Multan,38,2024-02-15
-1327,Zainab Sheikh,zainab.sheikh@uni.edu.pk,NULL,Islamabad,43,21/02/2024
-1328,Sara Raza,sara.raza@uni.edu.pk,21,Peshawar,91,"March 24, 2024"
-1329,Fatima Butt,fatima.butt@uni.edu.pk,N/A,Multan,103,13/04/2024
-1330,hina malik,hina.malik@uni.edu.pk,21,karachi,50,"September 28, 2024"
-1331,Maryam Qureshi,maryam.qureshi@uni.edu.pk,24,Multan,48,14/08/2024
-1332,Iqra Sheikh,iqra.sheikh@uni.edu.pk,25,Multan,39,17/07/2024
-1333,"  HINA RAZA ",hina.raza@uni.edu.pk,21,Islamabad,54,"May 21, 2024"
-1334,Noor Butt,noor.butt@uni.edu.pk,22,Peshawar,92,"June 1, 2024"
-1335,"  SAAD AHMED ",saad.ahmed@uni.edu.pk,21,Islamabad,63,"July 17, 2024"
-1336,Saad Khan,saad.khan@uni.edu.pk,20,Karachi,74,2024-02-10
-1337,"  SARA QURESHI ",sara.qureshi@uni.edu.pk,25,Islamabad,104,19/02/2024
-1338,Omar Sheikh,omar.sheikh@uni.edu.pk,22 years,Multan,94,2024-09-11
-1339,Zainab Sheikh,zainab@,22,Lahore,90,"February 26, 2024"
-1340,Ali Sheikh,ali.sheikh@uni.edu.pk,23,Multan,69,"March 13, 2024"
-1341,Noor Raza,noor.raza@uni.edu.pk,22,NULL,91,25/02/2024
-1342,"  ALI MALIK ",ali.malik@uni.edu.pk,22,NULL,43,"September 6, 2024"
-1343,Sara Sheikh,sara.sheikh@uni.edu.pk,22,ISB,36,01/04/2024
-1344,Iqra Raza,iqra.raza@uni.edu.pk,19,Islamabad,41,2024-11-04
-1345,"  NOOR BUTT ",noor.butt@uni.edu.pk,20,Karachi,46,"July 10, 2024"
-1346,Bilal Raza,bilal.raza@uni.edu.pk,24,LHR,95,2024-01-27
-1347,Maryam Ahmed,maryam.ahmed@uni.edu.pk,25," Lahore ",102,2024-11-11
-1348,Ayesha Butt,ayesha.butt@uni.edu.pk,19,LHR,79,2024-09-13
-1349,Talha Qureshi,talha.qureshi@uni.edu.pk,20,Peshawar,51,14/10/2024
-1350,Fatima Sheikh,fatima.sheikh@uni.edu.pk,24,Peshawar,92,2024-04-18
-1351,Zainab Butt,zainab.butt@uni.edu.pk,21,Lahore,84,2024-05-26
-1352,Ali Chaudhry,ali.chaudhry@uni.edu.pk,21,-,95,2024-09-18
-1353,Ahmed Malik,ahmed.malik@uni.edu.pk,22,Lahore,51,21/11/2024
-1354,Hina Malik,hina.malik@uni.edu.pk,21,Lahore,48,2024-10-28
-1355,Hamza Raza,hamza.raza@uni.edu.pk,23,karachi,81,17/07/2024
-1356,Sara Qureshi,sara.qureshi@uni.edu.pk,25," Lahore ",53,2024-01-25
-1357,Hamza Khan,hamza.khan@uni.edu.pk,21,Multan,53,26/02/2024
-1358,Hamza Raza,hamza.raza@uni.edu.pk,23,Lahore,68,"April 14, 2024"
-1359,Hina Sheikh,hina.sheikh@uni.edu.pk,23,Karachi,-2,08/04/2024
-1360,Omar Raza,omar.raza@uni.edu.pk,24,-,69,"January 7, 2024"
-1361,Hamza Chaudhry,hamza.chaudhry@uni.edu.pk,25,karachi,69,2024-11-02
-1362,"  AYESHA BUTT ",ayesha.butt@uni.edu.pk,25,karachi,64,2024-09-24
-1363,Iqra Raza,iqra.raza@uni.edu.pk,twenty,Multan,71,10/12/2024
-1364,Zainab Ahmed,zainab.ahmed@uni.edu.pk,23,karachi,46,20/11/2024
-1365,Noor Sheikh,noor.sheikh@uni.edu.pk,20,Islamabad,40,12/05/2024
-1366,Noor Ahmed,noor.uni.edu.pk,18,Karachi,72,"June 28, 2024"
-1367,Fatima Butt,fatima.butt@uni.edu.pk,18,ISB,49,"April 25, 2024"
-1368,"  OMAR SHEIKH ",omar.sheikh@uni.edu.pk,18,Karachi,57,"May 1, 2024"
-1369,Maryam Butt,maryam.butt@uni.edu.pk,22,Karachi,84,2024-11-07
-1370,Noor Qureshi,noor.qureshi@uni.edu.pk,24,Multan,108,13/03/2024
-1371,"  OMAR MALIK ",omar.malik@uni.edu.pk,-,Islamabad,55,"June 4, 2024"
-1372,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,19,Karachi,79,07/08/2024
-1373,Hina Chaudhry,hina.chaudhry@uni.edu.pk,23,Lahore,49,"May 7, 2024"
-1374,Iqra Chaudhry,iqra.uni.edu.pk,N/A,Peshawar,58,2024-09-15
-1375,Usman Butt,usman.butt@uni.edu.pk,22,Peshawar,86,2024-02-28
-1376,Usman Sheikh,usman.sheikh@uni.edu.pk,25,Lahore,90,2024-04-17
-1377,Sara Ahmed,sara.ahmed@uni.edu.pk,20,Islamabad,84,"October 10, 2024"
-1378,Ayesha Malik,ayesha.malik@uni.edu.pk,22,Karachi,44,2024-04-24
-1379,Iqra Butt,iqra.uni.edu.pk,22,Karachi,-4,"August 5, 2024"
-1380,Maryam Malik,maryam@,25,Karachi,82,"April 23, 2024"
-1381,Usman Sheikh,usman.sheikh@uni.edu.pk,N/A,Multan,84,"February 20, 2024"
-1382,Noor Malik,noor.malik@uni.edu.pk,24,Islamabad,55,2024-02-02
+1004,Usman Qureshi,usman.qureshi@uni.edu.pk,20,N/A,N/A,"August 21, 2024"
+1005,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,20,Multan,40,12/02/2024
+1006,Sara Malik,sara.malik@uni.edu.pk,20,Lahore,N/A,24/03/2024
+1007,Hina Raza,hina.raza@uni.edu.pk,-5,Peshawar,66,24/06/2024
+1008,Usman Raza,usman.raza@uni.edu.pk,19,Peshawar,41,10/04/2024
+1009,Omar Raza,omar.raza@uni.edu.pk,19,Lahore,93,02/08/2024
+1010,Hamza Qureshi,hamza.qureshi@uni.edu.pk,25,Karachi,81,2024-01-16
+1011,Fatima Sheikh,fatima.sheikh@uni.edu.pk,24,Islamabad,57,21/07/2024
+1012,Zainab Raza,zainab.raza@uni.edu.pk,25,ISB,71,"August 1, 2024"
+1013,Omar Khan,omar.khan@uni.edu.pk,21,Karachi,43,15/03/2024
+1014,Bilal Ahmed,bilal@,24,khi,80,"May 2, 2024"
+1015,Hamza Khan,hamza.khan@uni.edu.pk,22,LHR,-,"February 23, 2024"
+1016,Hamza Khan,hamza.khan@uni.edu.pk,20,Karachi,80,"January 24, 2024"
+1017,Saad Butt,saad.butt@uni.edu.pk,19,,77,24/07/2024
+1018,Maryam Raza,maryam.raza@uni.edu.pk,20,LHR,36,08/01/2024
+1019,Hamza Qureshi,hamza.qureshi@uni.edu.pk,18,Multan,69,2024-12-09
+1020,hina sheikh,hina.sheikh@uni.edu.pk,twenty,Islamabad,71,2024-03-11
+1021,"  NOOR AHMED ",noor.ahmed@uni.edu.pk,20,Lahore,91,2024-10-01
+1022,Hina Khan,hina.khan@uni.edu.pk,20,Islamabad,36,"August 9, 2024"
+1023,zainab malik,zainab.malik@uni.edu.pk,20,Islamabad,N/A,07/10/2024
+1024,Talha Butt,talha.butt@uni.edu.pk,25,Karachi,38,2024-01-25
+1025,Hina Malik,hina.malik@uni.edu.pk,21,Peshawar,84,"January 26, 2024"
+1026,Ayesha Ahmed,ayesha.ahmed@uni.edu.pk,22,Islamabad,-6,"August 15, 2024"
+1027,Fatima Malik,fatima.malik@uni.edu.pk,20,karachi,36,"March 18, 2024"
+1028,Hina Sheikh,hina.sheikh@uni.edu.pk,25,Islamabad,78,"March 28, 2024"
+1029,Ayesha Sheikh,ayesha.sheikh@uni.edu.pk,24,Lahore,37,2024-04-22
+1030,Ali Butt,ali.butt@uni.edu.pk,20,,49,"March 16, 2024"
+1031,Omar Qureshi,omar.qureshi@uni.edu.pk,19,Peshawar,93,"December 23, 2024"
+1032,Saad Chaudhry,saad.chaudhry@uni.edu.pk,NULL,Multan,86,06/12/2024
+1033,Fatima Raza,fatima.raza@uni.edu.pk,25,Peshawar,81,16/01/2024
+1034,Ali Raza,ali.raza@uni.edu.pk,21,Peshawar,60,2024-04-13
+1035,Sara Ahmed,sara.ahmed@uni.edu.pk,22 years,Lahore,66,2024-03-01
+1036,Hamza Malik,hamza.malik@uni.edu.pk,24,Multan,48,2024-08-07
+1037,Zainab Butt,zainab.butt@uni.edu.pk,24,Lahore,36,2024-03-10
+1038,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,18,N/A,-,2024-11-28
+1039,"  MARYAM AHMED ",maryam.ahmed@uni.edu.pk,NULL,Islamabad,90,2024-08-03
+1040,Omar Ahmed,omar.ahmed@uni.edu.pk,22,NULL,69,2024-06-03
+1041,Maryam Raza,maryam.raza@uni.edu.pk,23,Multan,38,"December 7, 2024"
+1042,Bilal Butt,bilal.butt@uni.edu.pk,19,Peshawar,67,"March 16, 2024"
+1043,Talha Khan,talha.khan@uni.edu.pk,N/A,Multan,65,01/08/2024
+1044,Noor Butt,noor.butt@uni.edu.pk,21,Lahore,77,2024-04-21
+1045,Hamza Sheikh,hamza.sheikh@uni.edu.pk,24,Multan,36,2024-07-14
+1046,Iqra Raza,iqra.raza@uni.edu.pk,22,khi,52,05/03/2024
+1047,Sara Butt,sara.butt@uni.edu.pk,25,-,35,2024-05-10
+1048,Hamza Khan,hamza.khan@uni.edu.pk,20,Karachi,40,2024-02-09
+1049,Iqra Ahmed,iqra.ahmed@uni.edu.pk,24,Islamabad,60,2024-05-10
+1050,Saad Raza,saad.raza@uni.edu.pk,19," Lahore ",54,2024-06-03
+1051,Ahmed Malik,ahmed.malik@uni.edu.pk,25,Peshawar,77,"March 23, 2024"
+1052,Maryam Chaudhry,maryam.chaudhry@uni.edu.pk,21,Karachi,-7,2024-11-18
+1053,"  SARA AHMED ",sara.ahmed@uni.edu.pk,21,Lahore,39,"March 1, 2024"
+1054,Fatima Malik,fatima.malik@uni.edu.pk,23,Multan,56,2024-10-19
+1055,Fatima Chaudhry,fatima.chaudhry@uni.edu.pk,18,Islamabad,90,2024-02-07
+1056,Noor Chaudhry,noor.chaudhry@uni.edu.pk,20,Karachi,37,"September 12, 2024"
+1057,ali qureshi,ali.qureshi@uni.edu.pk,NULL,Lahore,77,"July 17, 2024"
+1058,Maryam Chaudhry,maryam.chaudhry@uni.edu.pk,22,Islamabad,75,01/05/2024
+1059,Talha Sheikh,talha.sheikh@uni.edu.pk,18,Lahore,56,2024-03-22
+1060,Hamza Malik,hamza.malik@uni.edu.pk,25,Multan,-6,01/08/2024
+1061,Fatima Sheikh,fatima.sheikh@uni.edu.pk,-,khi,63,"March 5, 2024"
+1062,Zainab Raza,zainab.raza@uni.edu.pk,22,khi,73,"February 1, 2024"
+1063,Usman Qureshi,usman.qureshi@uni.edu.pk,21,Islamabad,76,"July 5, 2024"
+1064,Ahmed Malik,ahmed.malik@uni.edu.pk,24,Multan,88,2024-03-12
+1065,Fatima Butt,fatima.butt@uni.edu.pk,-," Lahore ",88,24/01/2024
+1066,Hina Raza,hina.raza@uni.edu.pk,19,Lahore,65,"April 18, 2024"
+1067,Zainab Sheikh,zainab.sheikh@uni.edu.pk,19,Multan,48,"April 26, 2024"
+1068,Omar Qureshi,omar.qureshi@uni.edu.pk,21,Lahore,35,11/04/2024
+1069,Zainab Sheikh,zainab.sheikh@uni.edu.pk,24,Multan,38,15/01/2024
+1070,Hamza Khan,hamza@,22,Karachi,35,2024-02-21
+1071,Hamza Raza,hamza.raza@uni.edu.pk,25,Lahore,93,"August 11, 2024"
+1072,Ayesha Ahmed,ayesha.ahmed@uni.edu.pk,25,Karachi,48,"December 14, 2024"
+1073,"  OMAR CHAUDHRY ",omar.chaudhry@uni.edu.pk,24,Multan,75,"December 3, 2024"
+1074,Hina Raza,hina.raza@uni.edu.pk,22,Karachi,48,"February 21, 2024"
+1075,"  AHMED AHMED ",ahmed.ahmed@uni.edu.pk,21,Lahore,74,2024-10-25
+1076,Talha Qureshi,talha.qureshi@uni.edu.pk,25,Islamabad,52,2024-09-17
+1077,"  SAAD BUTT ",saad.butt@uni.edu.pk,23,khi,45,"March 26, 2024"
+1078,Omar Sheikh,omar.sheikh@uni.edu.pk,18,Peshawar,78,"March 7, 2024"
+1079,Sara Sheikh,sara.sheikh@uni.edu.pk,25,Islamabad,51,17/11/2024
+1080,Zainab Malik,zainab.malik@uni.edu.pk,NULL,Karachi,49,"September 22, 2024"
+1081,Sara Malik,sara.malik@uni.edu.pk,19,Karachi,85,2024-08-15
+1082,Ahmed Qureshi,ahmed.qureshi@uni.edu.pk,19,khi,55,2024-08-28
+1083,Ali Raza,ali.raza@uni.edu.pk,21,Lahore,90,"July 17, 2024"
+1084,Hamza Chaudhry,hamza.chaudhry@uni.edu.pk,20,Peshawar,46,14/03/2024
+1085,Saad Qureshi,saad.qureshi@uni.edu.pk,19,Lahore,54,04/03/2024
+1086,"  TALHA QURESHI ",talha.qureshi@uni.edu.pk,24,Lahore,74,03/10/2024
+1087,Ayesha Malik,ayesha.malik@uni.edu.pk,18,Peshawar,68,"May 13, 2024"
+1088,Omar Qureshi,omar.qureshi@uni.edu.pk,19,Peshawar,66,24/08/2024
+1089,Zainab Qureshi,zainab.qureshi@uni.edu.pk,19,Lahore,55,"September 9, 2024"
+1090,Noor Qureshi,noor.qureshi@uni.edu.pk,19,Lahore,65,2024-08-12
+1091,Ahmed Sheikh,ahmed.sheikh@uni.edu.pk,NULL," Lahore ",88,23/02/2024
+1092,Ali Ahmed,ali.ahmed@uni.edu.pk,19,Lahore,87,2024-11-21
+1093,Iqra Raza,iqra@,24,karachi,40,2024-05-06
+1094,Zainab Sheikh,zainab.sheikh@uni.edu.pk,25,Peshawar,76,"May 16, 2024"
+1095,Ayesha Sheikh,ayesha.sheikh@uni.edu.pk,25,Islamabad,NULL,14/11/2024
+1096,Fatima Qureshi,fatima@,19,,94,2024-07-19
+1097,Ayesha Chaudhry,ayesha.chaudhry@uni.edu.pk,19,Karachi,59,26/03/2024
+1098,Zainab Khan,zainab.khan@uni.edu.pk,18,Multan,94,2024-08-14
+1099,Zainab Sheikh,zainab.sheikh@uni.edu.pk,twenty,NULL,64,"February 19, 2024"
+1100,Talha Ahmed,talha.ahmed@uni.edu.pk,22,,67,2024-09-21
+1101,hamza malik,hamza.malik@uni.edu.pk,24,Multan,42,"April 13, 2024"
+1102,Fatima Khan,fatima.khan@uni.edu.pk,21,lahore,70,10/04/2024
+1103,Bilal Ahmed,bilal.ahmed@uni.edu.pk,-,Multan,42,"September 25, 2024"
+1104,Hamza Butt,hamza.butt@uni.edu.pk,-," Lahore ",89,25/02/2024
+1105,Zainab Qureshi,zainab.qureshi@uni.edu.pk,18,Multan,39,2024-08-05
+1106,Talha Qureshi,talha.qureshi@uni.edu.pk,-,LHR,71,2024-11-01
+1107,Maryam Ahmed,maryam.ahmed@uni.edu.pk,25,Karachi,52,"July 27, 2024"
+1108,Ahmed Butt,ahmed.butt@uni.edu.pk,N/A,Islamabad,37,"May 12, 2024"
+1109,Talha Khan,talha.khan@uni.edu.pk,25,Lahore,68,"May 7, 2024"
+1110,Omar Ahmed,omar.ahmed@uni.edu.pk,19,Islamabad,58,"April 25, 2024"
+1111,Hina Butt,hina.butt@uni.edu.pk,23,NULL,77,2024-06-02
+1112,Usman Malik,usman.malik@uni.edu.pk,18,Karachi,85,2024-04-17
+1113,Ayesha Raza,ayesha.raza@uni.edu.pk,-5,Multan,51,2024-10-24
+1114,Maryam Butt,maryam.butt@uni.edu.pk,22,NULL,80,22/10/2024
+1115,Iqra Ahmed,iqra.ahmed@uni.edu.pk,18,Lahore,89,"February 4, 2024"
+1116,Saad Chaudhry,saad.chaudhry@uni.edu.pk,18,NULL,91,2024-02-17
+1117,Omar Sheikh,omar.sheikh@uni.edu.pk,20,Multan,88,"March 24, 2024"
+1118,Zainab Sheikh,zainab.sheikh@uni.edu.pk,25,Multan,41,2024-06-21
+1119,Ayesha Raza,ayesha.raza@uni.edu.pk,18,-,67,"March 16, 2024"
+1120,Ali Khan,ali.khan@uni.edu.pk,19,Islamabad,73,14/01/2024
+1121,Sara Chaudhry,sara.chaudhry@uni.edu.pk,19," Lahore ",72,"April 5, 2024"
+1122,"  MARYAM RAZA ",maryam.raza@uni.edu.pk,twenty,Islamabad,NULL,"March 12, 2024"
+1123,Sara Qureshi,sara.qureshi@uni.edu.pk,20,Multan,50,"September 21, 2024"
+1124,Saad Ahmed,saad.ahmed@uni.edu.pk,21,khi,88,2024-06-21
+1125,Saad Butt,saad.butt@uni.edu.pk,N/A,Islamabad,87,2024-11-14
+1126,Maryam Malik,maryam.malik@uni.edu.pk,23,,70,"February 12, 2024"
+1127,Omar Butt,omar.butt@uni.edu.pk,23,Islamabad,91,26/04/2024
+1128,Fatima Qureshi,fatima.qureshi@uni.edu.pk,24,lahore,71,2024-02-20
+1129,Fatima Raza,fatima.raza@uni.edu.pk,19,Lahore,50,06/05/2024
+1130,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,25,Lahore,79,"November 6, 2024"
+1131,Iqra Raza,iqra@,24,Islamabad,40,"February 9, 2024"
+1132,Zainab Ahmed,zainab.ahmed@uni.edu.pk,24,Peshawar,85,12/09/2024
+1133,"  ZAINAB RAZA ",zainab.raza@uni.edu.pk,23,Karachi,66,"May 5, 2024"
+1134,Sara Raza,sara.raza@uni.edu.pk,20,Lahore,60,"January 18, 2024"
+1135,Usman Khan,usman.khan@uni.edu.pk,25,Islamabad,76,12/03/2024
+1136,Talha Raza,talha.raza@uni.edu.pk,19,Multan,52,2024-02-08
+1137,noor khan,noor.khan@uni.edu.pk,23,Lahore,48,13/01/2024
+1138,Fatima Ahmed,fatima.ahmed@uni.edu.pk,21,N/A,67,"July 17, 2024"
+1139,Hamza Butt,hamza.butt@uni.edu.pk,23,Islamabad,50,"April 5, 2024"
+1140,Iqra Ahmed,iqra.ahmed@uni.edu.pk,20,Multan,37,2024-12-13
+1141,Maryam Malik,maryam.malik@uni.edu.pk,24,lahore,55,2024-10-23
+1142,"  SARA SHEIKH ",sara.sheikh@uni.edu.pk,24," Lahore ",95,16/09/2024
+1143,Ayesha Raza,ayesha.raza@uni.edu.pk,24,NULL,105,01/02/2024
+1144,Ayesha Qureshi,ayesha.qureshi@uni.edu.pk,19,Multan,77,2024-08-16
+1145,"  HINA RAZA ",hina.raza@uni.edu.pk,20,Peshawar,37,2024-03-24
+1146,Saad Malik,saad.malik@uni.edu.pk,23,N/A,44,"July 8, 2024"
+1147,Sara Butt,sara.butt@uni.edu.pk,18,Islamabad,42,2024-12-21
+1148,Saad Qureshi,saad.qureshi@uni.edu.pk,19,LHR,80,20/03/2024
+1149,Bilal Butt,bilal.butt@uni.edu.pk,21,Lahore,62,24/11/2024
+1150,Talha Ahmed,talha.ahmed@uni.edu.pk,25,Karachi,60,2024-09-09
+1151,Sara Ahmed,sara.ahmed@uni.edu.pk,24,Multan,66,2024-06-09
+1152,Noor Khan,noor.khan@uni.edu.pk,22,Karachi,65,2024-08-28
+1153,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,21,LHR,64,2024-09-08
+1154,"  MARYAM KHAN ",maryam.khan@uni.edu.pk,24,Lahore,40,2024-11-19
+1155,omar ahmed,omar.ahmed@uni.edu.pk,22,NULL,36,"April 14, 2024"
+1156,Iqra Raza,iqra.raza@uni.edu.pk,19,Islamabad,63,20/07/2024
+1157,Omar Khan,omar.khan@uni.edu.pk,20,Lahore,47,26/11/2024
+1158,Ahmed Chaudhry,ahmed.chaudhry@uni.edu.pk,24,Multan,85,2024-11-18
+1159,Maryam Qureshi,maryam.qureshi@uni.edu.pk,N/A,Lahore,63,2024-05-14
+1160,zainab raza,zainab.raza@uni.edu.pk,25,Peshawar,93,2024-10-26
+1161,Sara Chaudhry,sara.chaudhry@uni.edu.pk,18,Karachi,76,23/10/2024
+1162,Usman Chaudhry,usman.chaudhry@uni.edu.pk,22,Multan,81,"June 14, 2024"
+1163,Hamza Raza,hamza.raza@uni.edu.pk,22,Multan,60,"April 2, 2024"
+1164,Ayesha Raza,ayesha.raza@uni.edu.pk,N/A,Lahore,84,2024-05-28
+1165,Saad Ahmed,saad.ahmed@uni.edu.pk,22,Islamabad,94,"March 12, 2024"
+1166,Omar Qureshi,omar.qureshi@uni.edu.pk,N/A,khi,,"July 16, 2024"
+1167,Talha Khan,talha.khan@uni.edu.pk,24,lahore,93,18/06/2024
+1168,Omar Ahmed,omar.ahmed@uni.edu.pk,18,khi,92,"December 10, 2024"
+1169,Usman Malik,usman.malik@uni.edu.pk,19,Lahore,108,2024-06-15
+1170,Ayesha Khan,ayesha.khan@uni.edu.pk,24,Lahore,72,"May 27, 2024"
+1171,Saad Sheikh,saad.sheikh@uni.edu.pk,21,Karachi,93,2024-10-12
+1172,Iqra Raza,iqra.raza@uni.edu.pk,22,N/A,82,"April 7, 2024"
+1173,Talha Butt,talha@,23,Peshawar,65,"March 11, 2024"
+1174,Talha Raza,talha.raza@uni.edu.pk,19,Peshawar,81,"October 15, 2024"
+1175,Ahmed Qureshi,ahmed.uni.edu.pk,24,karachi,47,2024-12-14
+1176,Sara Qureshi,sara.qureshi@uni.edu.pk,24,lahore,54,09/07/2024
+1177,Hamza Sheikh,hamza.sheikh@uni.edu.pk,24,Peshawar,101,"August 11, 2024"
+1178,Sara Raza,sara.raza@uni.edu.pk,18,ISB,-8,28/10/2024
+1179,Hamza Ahmed,hamza.ahmed@uni.edu.pk,25,Peshawar,93,"April 24, 2024"
+1180,Sara Qureshi,sara@,19,Islamabad,41,2024-02-11
+1181,"  SAAD SHEIKH ",saad.sheikh@uni.edu.pk,25,Lahore,-5,18/08/2024
+1182,Hamza Butt,hamza.butt@uni.edu.pk,22,Multan,80,"November 19, 2024"
+1183,omar khan,omar.khan@uni.edu.pk,18,Multan,42,09/06/2024
+1184,"  FATIMA CHAUDHRY ",fatima.chaudhry@uni.edu.pk,18,Karachi,74,2024-03-17
+1185,Hamza Sheikh,hamza.sheikh@uni.edu.pk,23,Multan,51,"June 7, 2024"
+1186,Ahmed Chaudhry,ahmed.chaudhry@uni.edu.pk,20,ISB,77,13/10/2024
+1187,Hamza Khan,hamza.khan@uni.edu.pk,18,Islamabad,38,"February 26, 2024"
+1188,talha butt,talha.butt@uni.edu.pk,23,lahore,55,"November 1, 2024"
+1189,Noor Malik,noor.malik@uni.edu.pk,N/A,Multan,91,2024-11-19
+1190,Ali Sheikh,ali.sheikh@uni.edu.pk,18,Multan,64,"October 11, 2024"
+1191,Usman Sheikh,usman.sheikh@uni.edu.pk,22,LHR,72,2024-02-09
+1192,Saad Malik,saad.malik@uni.edu.pk,24,Islamabad,59,"September 17, 2024"
+1193,Ayesha Chaudhry,ayesha.chaudhry@uni.edu.pk,21,Lahore,76,2024-11-13
+1194,Ahmed Qureshi,ahmed.qureshi@uni.edu.pk,20,Lahore,103,2024-07-02
+1195,Fatima Sheikh,fatima.sheikh@uni.edu.pk,20,Multan,-,2024-10-08
+1196,Sara Khan,sara.khan@uni.edu.pk,18,-,66,25/12/2024
+1197,Bilal Sheikh,bilal.sheikh@uni.edu.pk,21,khi,88,"August 6, 2024"
+1198,Sara Raza,sara.raza@uni.edu.pk,22,khi,49,"November 9, 2024"
+1199,Hamza Malik,hamza.malik@uni.edu.pk,19,Multan,58,27/04/2024
+1200,"  SAAD KHAN ",saad.khan@uni.edu.pk,25,Peshawar,37,"February 1, 2024"
+1201,Usman Ahmed,usman.ahmed@uni.edu.pk,20,Multan,89,11/03/2024
+1202,Bilal Khan,bilal.khan@uni.edu.pk,18,Karachi,73,"November 6, 2024"
+1203,"  AYESHA AHMED ",ayesha.ahmed@uni.edu.pk,22 years,-,65,05/08/2024
+1204,Noor Malik,noor.malik@uni.edu.pk,21,Peshawar,74,11/11/2024
+1205,Ayesha Ahmed,ayesha.ahmed@uni.edu.pk,twenty,Lahore,83,28/07/2024
+1206,Zainab Chaudhry,zainab.chaudhry@uni.edu.pk,23,khi,75,2024-01-25
+1207,iqra raza,iqra.raza@uni.edu.pk,25,Lahore,63,"November 1, 2024"
+1208,Maryam Khan,maryam.khan@uni.edu.pk,18," Lahore ",38,2024-11-17
+1209,Hina Qureshi,hina.qureshi@uni.edu.pk,22,Peshawar,80,26/09/2024
+1210,Hamza Raza,hamza.raza@uni.edu.pk,19,Lahore,55,13/02/2024
+1211,Hina Ahmed,hina.ahmed@uni.edu.pk,25,Islamabad,63,"June 13, 2024"
+1212,Zainab Malik,zainab.malik@uni.edu.pk,18,Lahore,93,03/10/2024
+1213,Talha Ahmed,talha.ahmed@uni.edu.pk,19,Multan,35,21/04/2024
+1214,Iqra Sheikh,iqra.sheikh@uni.edu.pk,twenty,Lahore,76,"October 10, 2024"
+1215,Zainab Khan,zainab.khan@uni.edu.pk,21,Islamabad,92,2024-12-08
+1216,Sara Chaudhry,sara.uni.edu.pk,21,Peshawar,55,2024-09-20
+1217,Sara Butt,sara.butt@uni.edu.pk,24,Lahore,46,"January 16, 2024"
+1218,Saad Butt,saad.butt@uni.edu.pk,21,Multan,83,03/09/2024
+1219,Ayesha Raza,ayesha.raza@uni.edu.pk,19,Lahore,78,2024-09-02
+1220,Saad Chaudhry,saad.chaudhry@uni.edu.pk,25,Peshawar,55,11/10/2024
+1221,Zainab Ahmed,zainab.ahmed@uni.edu.pk,18,Peshawar,95,16/01/2024
+1222,Hina Qureshi,hina@,25,Multan,81,2024-06-01
+1223,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Lahore,67,2024-05-12
+1224,bilal khan,bilal.khan@uni.edu.pk,24,Peshawar,37,02/09/2024
+1225,Ali Qureshi,ali.qureshi@uni.edu.pk,19,Multan,80,"July 4, 2024"
+1226,Noor Khan,noor.khan@uni.edu.pk,18,Karachi,93,"February 16, 2024"
+1227,Noor Qureshi,noor.qureshi@uni.edu.pk,25,khi,60,2024-02-15
+1228,Ayesha Raza,ayesha.raza@uni.edu.pk,N/A,Islamabad,88,2024-04-20
+1229,Omar Butt,omar.butt@uni.edu.pk,24,karachi,39,"June 23, 2024"
+1230,Bilal Sheikh,bilal.sheikh@uni.edu.pk,21,Multan,66,2024-10-20
+1231,Ahmed Malik,ahmed.malik@uni.edu.pk,22,LHR,73,19/04/2024
+1232,Hamza Qureshi,hamza.qureshi@uni.edu.pk,19,Multan,48,2024-11-18
+1233,Maryam Raza,maryam.raza@uni.edu.pk,24," Lahore ",41,"April 19, 2024"
+1234,Fatima Qureshi,fatima.qureshi@uni.edu.pk,22,Multan,45,"August 4, 2024"
+1235,Talha Ahmed,talha.ahmed@uni.edu.pk,24,Islamabad,79,2024-11-14
+1236,Noor Butt,noor.butt@uni.edu.pk,23,-,78,"April 12, 2024"
+1237,Omar Butt,omar.butt@uni.edu.pk,25,LHR,86,"February 2, 2024"
+1238,Maryam Qureshi,maryam.qureshi@uni.edu.pk,20,Multan,47,2024-01-25
+1239,"  ZAINAB MALIK ",zainab.malik@uni.edu.pk,20,khi,35,"September 23, 2024"
+1240,Iqra Butt,iqra.butt@uni.edu.pk,20,Lahore,43,2024-03-28
+1241,Saad Ahmed,saad.ahmed@uni.edu.pk,23,Multan,88,"January 22, 2024"
+1242,Talha Chaudhry,talha.chaudhry@uni.edu.pk,20,Multan,42,07/10/2024
+1243,Bilal Sheikh,bilal.sheikh@uni.edu.pk,19,Karachi,68,2024-07-16
+1244,Ali Ahmed,ali.ahmed@uni.edu.pk,25,khi,55,"December 1, 2024"
+1245,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,18,ISB,-8,"March 18, 2024"
+1246,Maryam Ahmed,maryam.ahmed@uni.edu.pk,23,Karachi,66,09/01/2024
+1247,Iqra Khan,iqra.khan@uni.edu.pk,N/A,Lahore,50,2024-01-27
+1248,Fatima Malik,fatima.malik@uni.edu.pk,20,Lahore,68,10/02/2024
+1249,"  HAMZA QURESHI ",hamza.qureshi@uni.edu.pk,21,Lahore,37,2024-01-21
+1250,Hamza Ahmed,hamza.ahmed@uni.edu.pk,25,Multan,86,11/04/2024
+1251,Fatima Ahmed,fatima.ahmed@uni.edu.pk,250,Lahore,-1,27/05/2024
+1252,Zainab Qureshi,zainab.qureshi@uni.edu.pk,18,Lahore,37,"July 28, 2024"
+1253,Zainab Malik,zainab@,21,Lahore,53,07/12/2024
+1254,Talha Khan,talha.khan@uni.edu.pk,22,N/A,61,2024-11-09
+1255,Bilal Raza,bilal.raza@uni.edu.pk,22,karachi,80,2024-06-02
+1256,Hamza Butt,hamza.butt@uni.edu.pk,18,NULL,50,2024-02-22
+1257,Usman Malik,usman.malik@uni.edu.pk,18,Multan,58,17/07/2024
+1258,Ayesha Chaudhry,ayesha.chaudhry@uni.edu.pk,22,Karachi,36,21/03/2024
+1259,Usman Raza,usman.raza@uni.edu.pk,25,Multan,69,"June 15, 2024"
+1260,Talha Chaudhry,talha.chaudhry@uni.edu.pk,25,Multan,55,2024-04-19
+1261,Fatima Chaudhry,fatima.chaudhry@uni.edu.pk,18,karachi,70,05/02/2024
+1262,Saad Sheikh,saad.sheikh@uni.edu.pk,25,Karachi,46,"March 7, 2024"
+1263,Maryam Butt,maryam.butt@uni.edu.pk,20,Islamabad,68,"March 6, 2024"
+1264,"  ALI MALIK ",ali.malik@uni.edu.pk,24,Islamabad,61,08/08/2024
+1265,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Karachi,37,"August 17, 2024"
+1266,"  HINA CHAUDHRY ",hina.chaudhry@uni.edu.pk,23,Peshawar,94,"July 24, 2024"
+1267,Talha Khan,talha.khan@uni.edu.pk,twenty,Peshawar,35,2024-11-01
+1268,talha sheikh,talha.sheikh@uni.edu.pk,23,khi,56,2024-04-11
+1269,Hamza Chaudhry,hamza.chaudhry@uni.edu.pk,25,Multan,74,2024-09-13
+1270,Ali Butt,ali.butt@uni.edu.pk,23,karachi,54,"October 10, 2024"
+1271,Zainab Ahmed,zainab@,18,lahore,61,"December 3, 2024"
+1272,Hamza Butt,hamza@,21,Islamabad,60,2024-09-07
+1273,"  ZAINAB QURESHI ",zainab.qureshi@uni.edu.pk,18,Multan,61,"November 2, 2024"
+1274,Hamza Raza,hamza.raza@uni.edu.pk,23,N/A,79,"February 7, 2024"
+1275,Fatima Ahmed,fatima.ahmed@uni.edu.pk,18,lahore,87,01/09/2024
+1276,Iqra Ahmed,iqra.ahmed@uni.edu.pk,19,lahore,36,"April 7, 2024"
+1277,Sara Raza,sara.raza@uni.edu.pk,23,LHR,37,2024-12-18
+1278,Saad Malik,saad.malik@uni.edu.pk,19,Islamabad,50,06/02/2024
+1279,"  HINA QURESHI ",hina.qureshi@uni.edu.pk,24,Lahore,74,"November 24, 2024"
+1280,Talha Butt,talha.butt@uni.edu.pk,22 years,Peshawar,76,"March 6, 2024"
+1281,Hina Malik,hina.malik@uni.edu.pk,23,Karachi,62,"July 28, 2024"
+1282,Bilal Ahmed,bilal.ahmed@uni.edu.pk,25,Lahore,59,26/04/2024
+1283,Saad Sheikh,saad.uni.edu.pk,20,Multan,48,19/09/2024
+1284,Ahmed Raza,ahmed.raza@uni.edu.pk,21,Lahore,74,2024-05-19
+1285,Hina Chaudhry,hina.chaudhry@uni.edu.pk,20,Multan,43,2024-08-05
+1286,"  SAAD KHAN ",saad.khan@uni.edu.pk,22,Karachi,43,13/09/2024
+1287,Zainab Ahmed,zainab.ahmed@uni.edu.pk,21,N/A,64,12/10/2024
+1288,"  BILAL CHAUDHRY ",bilal.chaudhry@uni.edu.pk,18,Islamabad,44,2024-12-12
+1289,Saad Malik,saad@,23," Lahore ",81,2024-08-28
+1290,"  USMAN CHAUDHRY ",usman.chaudhry@uni.edu.pk,25,khi,73,2024-01-17
+1291,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Peshawar,64,"August 27, 2024"
+1292,saad khan,saad.khan@uni.edu.pk,21,Lahore,49,"September 28, 2024"
+1293,Talha Butt,talha.butt@uni.edu.pk,25,Multan,89,21/04/2024
+1294,Zainab Khan,zainab.khan@uni.edu.pk,20,Peshawar,86,2024-04-08
+1295,Noor Ahmed,noor.ahmed@uni.edu.pk,23,Peshawar,66,"April 10, 2024"
+1296,Ayesha Qureshi,ayesha.qureshi@uni.edu.pk,18,Peshawar,80,"June 16, 2024"
+1297,Zainab Sheikh,zainab.sheikh@uni.edu.pk,25,Peshawar,77,"May 13, 2024"
+1298,Ahmed Butt,ahmed.butt@uni.edu.pk,25,Karachi,95,2024-02-02
+1299,Maryam Khan,maryam.uni.edu.pk,20,Multan,58,"May 19, 2024"
+1300,Omar Butt,omar.butt@uni.edu.pk,18,Peshawar,91,"June 11, 2024"
+1301,Ahmed Malik,ahmed.malik@uni.edu.pk,24,Karachi,44,10/07/2024
+1302,Talha Chaudhry,talha.chaudhry@uni.edu.pk,24,Karachi,68,"June 15, 2024"
+1303,Iqra Ahmed,iqra.ahmed@uni.edu.pk,N/A,,47,"April 3, 2024"
+1304,Usman Butt,usman.butt@uni.edu.pk,21,Multan,78,"November 25, 2024"
+1305,Fatima Sheikh,fatima.sheikh@uni.edu.pk,NULL,Lahore,76,"February 17, 2024"
+1306,Zainab Khan,zainab.khan@uni.edu.pk,20,Multan,38,"November 27, 2024"
+1307,Hamza Khan,hamza.khan@uni.edu.pk,21,Lahore,44,"January 13, 2024"
+1308,sara qureshi,sara.qureshi@uni.edu.pk,22,Lahore,93,"March 11, 2024"
+1309,"  OMAR AHMED ",omar.ahmed@uni.edu.pk,22,khi,45,"January 11, 2024"
+1310,Ahmed Chaudhry,ahmed.chaudhry@uni.edu.pk,25,Islamabad,53,2024-12-07
+1311,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,18,Karachi,85,28/02/2024
+1312,Hamza Butt,hamza.butt@uni.edu.pk,23,karachi,86,15/08/2024
+1313,"  AYESHA QURESHI ",ayesha.qureshi@uni.edu.pk,21," Lahore ",59,"December 24, 2024"
+1314,Hamza Malik,hamza.malik@uni.edu.pk,21,Islamabad,63,2024-03-28
+1315,Hamza Qureshi,hamza.qureshi@uni.edu.pk,19,Peshawar,41,"January 6, 2024"
+1316,Omar Ahmed,omar@,22,khi,N/A,2024-10-16
+1317,Hamza Chaudhry,hamza.chaudhry@uni.edu.pk,21,khi,91,"February 17, 2024"
+1318,Noor Raza,noor.raza@uni.edu.pk,23,Peshawar,80,2024-10-25
+1319,Ahmed Ahmed,ahmed.ahmed@uni.edu.pk,22 years,Lahore,35,22/01/2024
+1320,Iqra Raza,iqra.raza@uni.edu.pk,22,Lahore,65,28/12/2024
+1321,Saad Sheikh,saad.sheikh@uni.edu.pk,-,Islamabad,56,2024-10-15
+1322,Noor Malik,noor.malik@uni.edu.pk,23,Multan,50,"December 15, 2024"
+1323,Hina Chaudhry,hina.chaudhry@uni.edu.pk,25,Peshawar,93,2024-04-08
+1324,Fatima Butt,fatima.butt@uni.edu.pk,20,Multan,46,2024-03-13
+1325,Bilal Sheikh,bilal.sheikh@uni.edu.pk,22,Multan,,09/07/2024
+1326,Zainab Sheikh,zainab.sheikh@uni.edu.pk,18,Islamabad,43,21/02/2024
+1327,Sara Raza,sara.raza@uni.edu.pk,21,Peshawar,91,"March 24, 2024"
+1328,Fatima Butt,fatima.butt@uni.edu.pk,N/A,Multan,103,13/04/2024
+1329,hina malik,hina.malik@uni.edu.pk,21,karachi,50,"September 28, 2024"
+1330,Maryam Qureshi,maryam.qureshi@uni.edu.pk,24,Multan,48,14/08/2024
+1331,Iqra Sheikh,iqra.sheikh@uni.edu.pk,25,Multan,39,17/07/2024
+1332,"  HINA RAZA ",hina.raza@uni.edu.pk,21,Islamabad,54,"May 21, 2024"
+1333,Noor Butt,noor.butt@uni.edu.pk,22,Peshawar,92,"June 1, 2024"
+1334,"  SAAD AHMED ",saad.ahmed@uni.edu.pk,21,Islamabad,63,"July 17, 2024"
+1335,Saad Khan,saad.khan@uni.edu.pk,20,Karachi,74,2024-02-10
+1336,"  SARA QURESHI ",sara.qureshi@uni.edu.pk,25,Islamabad,104,19/02/2024
+1337,Omar Sheikh,omar.sheikh@uni.edu.pk,22 years,Multan,94,2024-09-11
+1338,Zainab Sheikh,zainab@,22,Lahore,90,"February 26, 2024"
+1339,Ali Sheikh,ali.sheikh@uni.edu.pk,23,Multan,69,"March 13, 2024"
+1340,Noor Raza,noor.raza@uni.edu.pk,22,NULL,91,25/02/2024
+1341,"  ALI MALIK ",ali.malik@uni.edu.pk,22,NULL,43,"September 6, 2024"
+1342,Sara Sheikh,sara.sheikh@uni.edu.pk,22,ISB,36,01/04/2024
+1343,Iqra Raza,iqra.raza@uni.edu.pk,19,Islamabad,41,2024-11-04
+1344,"  NOOR BUTT ",noor.butt@uni.edu.pk,20,Karachi,46,"July 10, 2024"
+1345,Bilal Raza,bilal.raza@uni.edu.pk,24,LHR,95,2024-01-27
+1346,Maryam Ahmed,maryam.ahmed@uni.edu.pk,25," Lahore ",102,2024-11-11
+1347,Ayesha Butt,ayesha.butt@uni.edu.pk,19,LHR,79,2024-09-13
+1348,Talha Qureshi,talha.qureshi@uni.edu.pk,20,Peshawar,51,14/10/2024
+1349,Fatima Sheikh,fatima.sheikh@uni.edu.pk,24,Peshawar,92,2024-04-18
+1350,Zainab Butt,zainab.butt@uni.edu.pk,21,Lahore,84,2024-05-26
+1351,Ali Chaudhry,ali.chaudhry@uni.edu.pk,21,-,95,2024-09-18
+1352,Ahmed Malik,ahmed.malik@uni.edu.pk,22,Lahore,51,21/11/2024
+1353,Hina Malik,hina.malik@uni.edu.pk,21,Lahore,48,2024-10-28
+1354,Hamza Raza,hamza.raza@uni.edu.pk,23,karachi,81,17/07/2024
+1355,Sara Qureshi,sara.qureshi@uni.edu.pk,25," Lahore ",53,2024-01-25
+1356,Hamza Khan,hamza.khan@uni.edu.pk,21,Multan,53,26/02/2024
+1357,Hamza Raza,hamza.raza@uni.edu.pk,23,Lahore,68,"April 14, 2024"
+1358,Hina Sheikh,hina.sheikh@uni.edu.pk,23,Karachi,,08/04/2024
+1359,Omar Raza,omar.raza@uni.edu.pk,24,-,69,"January 7, 2024"
+1360,Hamza Chaudhry,hamza.chaudhry@uni.edu.pk,25,karachi,69,2024-11-02
+1361,"  AYESHA BUTT ",ayesha.butt@uni.edu.pk,25,karachi,64,2024-09-24
+1362,Iqra Raza,iqra.raza@uni.edu.pk,twenty,Multan,-,15/05/2024
+1363,Usman Qureshi,usman.qureshi@uni.edu.pk,22,Lahore,52,"September 17, 2024"
+1364,Zainab Qureshi,zainab.qureshi@uni.edu.pk,23,Lahore,86,"May 14, 2024"
+1365,"  USMAN MALIK ",usman.uni.edu.pk,19,NULL,70,24/12/2024
+1366,Maryam Khan,maryam.khan@uni.edu.pk,-,-,51,19/12/2024
+1367,"  ALI BUTT ",ali.butt@uni.edu.pk,23,Multan,-6,"September 21, 2024"
+1368,Maryam Sheikh,maryam.sheikh@uni.edu.pk,20,ISB,48,"October 26, 2024"
+1369,Saad Chaudhry,saad.chaudhry@uni.edu.pk,23,karachi,46,19/08/2024
+1370,Ali Ahmed,ali.uni.edu.pk,25,Karachi,76,21/02/2024
+1371,Noor Butt,noor.butt@uni.edu.pk,19,Multan,55,10/03/2024
+1372,Noor Malik,noor.malik@uni.edu.pk,19,LHR,45,"March 28, 2024"
+1373,"  TALHA QURESHI ",talha.qureshi@uni.edu.pk,18,Peshawar,58,2024-09-15
+1374,Usman Butt,usman.butt@uni.edu.pk,22,Peshawar,86,2024-02-28
+1375,Usman Sheikh,usman.sheikh@uni.edu.pk,25,Lahore,90,2024-04-17
+1376,Sara Ahmed,sara.ahmed@uni.edu.pk,20,Islamabad,84,"October 10, 2024"
+1377,Ayesha Malik,ayesha.malik@uni.edu.pk,22,Karachi,44,2024-04-24
+1378,Iqra Butt,iqra.uni.edu.pk,22,Karachi,-4,"August 5, 2024"
+1379,Maryam Malik,maryam@,25,Karachi,82,"April 23, 2024"
+1380,Usman Sheikh,usman.sheikh@uni.edu.pk,N/A,Multan,84,"February 20, 2024"
+1381,Noor Malik,noor.malik@uni.edu.pk,24,Islamabad,55,2024-02-02
+1382,Ali Sheikh,ali.sheikh@uni.edu.pk,25,lahore,36,2024-07-25
 1000,Usman Butt,usman.butt@uni.edu.pk,21,Islamabad,41,2024-11-25
-1019,Ali Ahmed,ali.ahmed@uni.edu.pk,-,ISB,89,"July 28, 2024"
-1038,"  AYESHA AHMED ",ayesha.ahmed@uni.edu.pk,24,lahore,69,2024-05-17
-1057,Ahmed Raza,ahmed.raza@uni.edu.pk,21,ISB,39,03/08/2024
-1076,Ahmed Butt,ahmed.butt@uni.edu.pk,23,Peshawar,35,08/12/2024
-1095,Zainab Butt,zainab.butt@uni.edu.pk,25,Multan,48,"October 28, 2024"
-1114,Bilal Qureshi,bilal.qureshi@uni.edu.pk,24,Peshawar,86,2024-09-21
-1133,Talha Sheikh,talha.sheikh@uni.edu.pk,24,Karachi,59,"January 1, 2024"
-1152,Saad Butt,saad.butt@uni.edu.pk,20,,85,09/07/2024
-1171,Hamza Khan,hamza.khan@uni.edu.pk,23,Peshawar,58,26/11/2024
-1190,Noor Malik,noor.malik@uni.edu.pk,N/A,Multan,91,2024-11-19
-1209,Maryam Khan,maryam.khan@uni.edu.pk,18," Lahore ",38,2024-11-17
-1228,Noor Qureshi,noor.qureshi@uni.edu.pk,25,khi,60,2024-02-15
-1247,Maryam Ahmed,maryam.ahmed@uni.edu.pk,23,Karachi,66,09/01/2024
-1266,Saad Sheikh,saad.sheikh@uni.edu.pk,22,Karachi,37,"August 17, 2024"
-1285,Ahmed Raza,ahmed.raza@uni.edu.pk,21,Lahore,74,2024-05-19
-1304,Iqra Ahmed,iqra.ahmed@uni.edu.pk,N/A,,47,"April 3, 2024"
+1019,Hamza Qureshi,hamza.qureshi@uni.edu.pk,18,Multan,69,2024-12-09
+1038,Bilal Chaudhry,bilal.chaudhry@uni.edu.pk,18,N/A,-,2024-11-28
+1057,ali qureshi,ali.qureshi@uni.edu.pk,NULL,Lahore,77,"July 17, 2024"
+1076,Talha Qureshi,talha.qureshi@uni.edu.pk,25,Islamabad,52,2024-09-17
+1095,Ayesha Sheikh,ayesha.sheikh@uni.edu.pk,25,Islamabad,NULL,14/11/2024
+1114,Maryam Butt,maryam.butt@uni.edu.pk,22,NULL,80,22/10/2024
+1133,"  ZAINAB RAZA ",zainab.raza@uni.edu.pk,23,Karachi,66,"May 5, 2024"
+1152,Noor Khan,noor.khan@uni.edu.pk,22,Karachi,65,2024-08-28
+1171,Saad Sheikh,saad.sheikh@uni.edu.pk,21,Karachi,93,2024-10-12
+1190,Ali Sheikh,ali.sheikh@uni.edu.pk,18,Multan,64,"October 11, 2024"
+1209,Hina Qureshi,hina.qureshi@uni.edu.pk,22,Peshawar,80,26/09/2024
+1228,Ayesha Raza,ayesha.raza@uni.edu.pk,N/A,Islamabad,88,2024-04-20
+1247,Iqra Khan,iqra.khan@uni.edu.pk,N/A,Lahore,50,2024-01-27
+1266,"  HINA CHAUDHRY ",hina.chaudhry@uni.edu.pk,23,Peshawar,94,"July 24, 2024"
+1285,Hina Chaudhry,hina.chaudhry@uni.edu.pk,20,Multan,43,2024-08-05
+1304,Usman Butt,usman.butt@uni.edu.pk,21,Multan,78,"November 25, 2024"
